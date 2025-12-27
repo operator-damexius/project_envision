@@ -1,0 +1,4 @@
+name,id,flux/second,f/s (base rate),f/s (base cap),flux/use,f/u (base rate),f/u (base cap),cr/u,max uses,regen,charge up,active,down,cooldown,toggle,noDissipation,noHardDissipation,hardFlux,noFiring,noTurning,noStrafing,noAccel,noShield,noVent,isPhaseCloak,tags,icon
+Oracle Surge,solvaris_surge,0,0,0,500,0,0,0,,,,15,5,3,5,,,,,,,,,,,,graphics/icons/shipsystems/solvaris_nv1.png
+Neural Nova,solvaris_nova,0,0,0,1000,0,0,0,,,5,5,5,10,5,5,,,,,,,,,,,graphics/icons/shipsystems/solvaris_nv2.png
+Singularity,solvaris_singularity,0,0,0,2000,0,0,0,,,10,10,10,30,10,10,,,,,,,,,,,graphics/icons/shipsystems/solvaris_nv3.png

@@ -1,0 +1,58 @@
+{
+    "SOLVARIS_APEX":{
+        "mode":"QUAD_STRIP",
+        "engineColor":[255,40,80,255],
+        "contrailDuration":2.5,
+        "contrailWidthMult":1.2,
+        "contrailPartDuration":1.5,
+        "contrailColor":[200,30,60,40],
+        "glowSizeMult":2.5,
+        "glowColor":[255,60,100,235],
+        "omegaMode":true,
+        "omegaColor":[80,255,255,160],
+        
+        "contrailMaxSpeedMult":0.35, 
+        "contrailMinSpeedMult":0.35, 
+        "contrailSpawnDistMult":0.5,
+        "contrailAngularVelocityMult":0.5,
+        "type":"GLOW"
+    },
+    
+    "SOLVARIS_ARGENT":{
+        "mode":"QUAD_STRIP",
+        "engineColor":[225,235,255,255],
+        "contrailDuration":2,
+        "contrailWidthMult":1,
+        "contrailPartDuration":1.5,
+        "contrailColor":[180,200,220,50],
+        "glowSizeMult":2.2,
+        "glowColor":[200,230,255,235],
+        "omegaMode":true,
+        "omegaColor":[255,255,255,160],
+        
+        "contrailMaxSpeedMult":0.4, 
+        "contrailMinSpeedMult":0.4, 
+        "contrailSpawnDistMult":0.2,
+        "contrailAngularVelocityMult":0.5,
+        "type":"GLOW"
+    },
+
+    "SOLVARIS_NOVA":{
+        "mode":"QUAD_STRIP",
+        "engineColor":[255,160,40,255],
+        "contrailDuration":2.2,
+        "contrailWidthMult":1.1,
+        "contrailPartDuration":1.5,
+        "contrailColor":[200,90,20,50],
+        "glowSizeMult":2.5,
+        "glowColor":[255,120,50,235],
+        "omegaMode":true,
+        "omegaColor":[255,255,200,180],
+        
+        "contrailMaxSpeedMult":0.35, 
+        "contrailMinSpeedMult":0.35, 
+        "contrailSpawnDistMult":0.5,
+        "contrailAngularVelocityMult":0.5,
+        "type":"GLOW"
+    }
+}

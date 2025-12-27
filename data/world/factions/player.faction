@@ -1,14 +1,7 @@
 {
     "knownShips": {
         "tags":[
-            "base_bp", 
-            "lowtech_bp", 
-            "midline_bp", 
-            "missile_bp", 
-            "hightech_bp", 
-            "independent", 
-            "solvaris_bp", 
-            "omega"
+
         ],
         "hulls":[
 
@@ -18,14 +11,7 @@
 
     "knownWeapons":{
 		"tags":[
-            "base_bp", 
-            "lowtech_bp", 
-            "midline_bp", 
-            "missile_bp", 
-            "hightech_bp", 
-            "independent", 
-            "solvaris_bp", 
-            "omega"
+            
         ],
 		"weapons":[
 

@@ -1,64 +1,54 @@
 {
     "playableFaction":true,
     "corvusCompatible":true,
-	"noSyncRelations":"false",
+    "noSyncRelations":false,
     "rebelFleetSuffix":"insurgents",
-	"colonyTargetValuator":"exerelin.campaign.colony.IndustrialColonyTargetValuator",
-    "colonyExpeditionChance": 0.75,
-	"morality":"good",
-    "maxColonyDistance": 25,
+    "colonyTargetValuator":"exerelin.campaign.colony.IndustrialColonyTargetValuator",
+    "colonyExpeditionChance": 1.0,
+    "morality":"good",
+    "spawnPoint": "nimoria",
+    "vengeanceFleetSizeMult":1.25,
+    "maxColonyDistance": 100,
 
     "startRelationships":{
-		# Vanilla factions that should be manually set (IE not "hidden" ones),
-		"hegemony":-0.4,
-		"tritachyon":0.4,
-		"luddic_church":-0.25,
-		"persean":0.4,
-		"independent":0.2,
-		"pirates":-0.5,
+        "hegemony":-0.4,
+        "tritachyon":0.0,
+        "luddic_church":-0.25,
+        "persean":0.0,
+        "independent":0.2,
+        "pirates":-0.5,
+        "lions_guard":0.0,
+        "sindrian_diktat":0.0,
+        "luddic_path":-0.8,
+        "remnant":1.0,
 
-		# These should be set to the same relationship
-		"lions_guard":0.4,
-		"sindrian_diktat":0.4,
 
-		# More vanilla factions that should be manually set
-		"luddic_path":-0.8,
-		"remnant":1.0,
-
-		# Mod factions
-		"uaf":0.4,
-		"mayasura":0.25,
-		"ironshell":-0.4,
-		"knights_of_eva":-0.8,
-		"scalartech":0.4,
+        "uaf":0.4,
+        "mayasura":0.25,
+        "ironshell":-0.4,
+        "knights_of_eva":-0.8,
+        "scalartech":0.4,
         "batavia":0.4,
         "diableavionics":0.4,
         "dassault_mikoyan":0.4
-	},
-
-
-    "maxRelationships":{ 
-
     },
 
-
-	"diplomacyPositiveChance":{ 
-        "tritachyon": 1.0, 
+    "diplomacyPositiveChance":{ 
+        "tritachyon": 0.5, 
         "remnant": 1.0,
         "batavia":0.4
     },
 
-
     "diplomacyNegativeChance":{ 
-        "sindrian_diktat":0.25,
+        "sindrian_diktat":0.1,
         "hegemony":1.0,
-        "persean":0.50,
-        "tritachyon":0.10,
+        "persean":0.1,
+        "tritachyon":0.1,
         "luddic_church":1.0,
         "luddic_path":1.0,
-        "pirates":0.75
+        "lions_guard":0.0,
+        "pirates":1.0
     },
-
 
     "alignments":{
         "technocratic":0.5,
@@ -67,53 +57,21 @@
         "diplomatic":0.5,
         "ideological":0.0,
         "corporate":1.0
-
     },
 
+    "diplomacyTraits":[
+        "helps_allies", "stalwart", "likes_ai", "neutralist"
+    ],
 
-	"diplomacyTraits":["helps_allies", "stalwart", "likes_ai", "neutralist"],
-
-    "vengeanceFleetSizeMult":1.25,
-	
     "startShipsSolo":[
-        "srss_perpetuation_standard"
-    ],
-	"startShipsCombatSmall":[
-        "srss_austerity_standard",
-        "srss_endurance_standard", 
-        "srss_determinant_fuel_stardard",
-        "srss_determinant_stardard"
-    ],
-    "startShipsCombatLarge":[
-        "srss_endurance_standard", 
-        "srss_continuance_standard", 
-        "srss_determinant_fuel_stardard",
-        "srss_determinant_stardard"
-    ],
-    "startShipsSuper":[
-        "srss_forbearance_standard", 
-        "srss_endurance_omega", 
-        "srss_endurance_omega", 
-        "srss_continuance_standard",
-        "srss_continuance_standard",
-        "srss_perpetuation_standard",
-        "srss_perpetuation_omega",
-        "srss_austerity_standard",
-        "srss_austerity_standard",
-        "srss_austerity_omega",
-        "srss_austerity_omega",
-        "srss_stamina_standard",
-        "srss_stamina_standard",
-        "srss_determinant_fuel_stardard",
-        "srss_determinant_stardard",
-        "srss_determinant_fuel_stardard",
-        "srss_determinant_stardard"
+        ["oracle_divergence_F1"], ["oracle_vortex_F1"], ["oracle_defiance_F1"]
     ],
 
-	
     "startSpecialItems":[
-        [["solvaris_package",""]],
-        [["pristine_nanoforge",""]]
-    ]
+        [["solvaris_package",""]], [["exilium_core",""]], [["nanoforge_pristine",""]]
+    ],
 
+    "bonusSeeds":[
+        {"id":"population_upsize", "count":1}, {"id":"nanoforge_pristine", "count":1}, {"id":"synchrotron", "count":1}
+    ]
 }

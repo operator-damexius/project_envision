@@ -12,8 +12,10 @@
   "shieldRadius": 122,
   "viewOffset": 0,
   "builtInMods": [
-    "srss_principles_core",
-    "missile_reload"
+    "missile_reload",
+    "solvaris_core",
+    "solvaris_phase_coils",
+    "solvaris_prime_doctrine"
   ],
   "weaponSlots": [
     {

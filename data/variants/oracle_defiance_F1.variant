@@ -1,0 +1,44 @@
+{
+    "displayName": "F1",
+    "fluxCapacitors": 30,
+    "fluxVents": 30,
+    "goalVariant": true,
+    "hullId": "oracle_defiance",
+    "hullMods": [],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "oracle_defiance_F1",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS0001": "vpdriver"}
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0008": "amsrm",
+                "WS0009": "amsrm"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0004": "riftlance",
+                "WS0005": "riftlance",
+                "WS0006": "riftlance",
+                "WS0007": "riftlance"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0002": "riftbeam",
+                "WS0003": "riftbeam"
+            }
+        }
+    ]
+}

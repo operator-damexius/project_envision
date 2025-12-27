@@ -1,7 +1,7 @@
 {
     "displayName": "Standard",
-    "fluxCapacitors": 35,
-    "fluxVents": 21,
+    "fluxCapacitors": 50,
+    "fluxVents": 16,
     "goalVariant": true,
     "hullId": "srss_forbearance",
     "hullMods": [
@@ -21,23 +21,18 @@
     "weaponGroups": [
         {
             "autofire": false,
-            "mode": "ALTERNATING",
+            "mode": "LINKED",
             "weapons": {
-                "WS0011": "gigacannon",
-                "WS0012": "gigacannon"
+                "WS0011": "hephag",
+                "WS0012": "hephag"
             }
         },
         {
             "autofire": false,
-            "mode": "LINKED",
-            "weapons": {"WS0019": "locust"}
-        },
-        {
-            "autofire": false,
             "mode": "ALTERNATING",
             "weapons": {
-                "WS0015": "gorgonpod",
-                "WS0016": "gorgonpod"
+                "WS0015": "dragon",
+                "WS0016": "dragon"
             }
         },
         {
@@ -61,6 +56,11 @@
                 "WS0009": "taclaser",
                 "WS0010": "taclaser"
             }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS0019": "guardian"}
         },
         {
             "autofire": true,

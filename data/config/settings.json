@@ -1,13 +1,16 @@
 {
 
 	"designTypeColors":{
-		"solvaris": [0, 71, 143, 255],
+		"solvaris": [0, 71, 143, 255]
 	},
 	
 	"graphics":{
 		"blueprint_packages":{
 			"solvaris_ships": "graphics/factions/en_flag.png",
-			"solvaris_armory": "graphics/factions/en_flag.png"
-		}
+			"solvaris_armory": "graphics/factions/en_flag.png",
+			"solvaris_structures": "graphics/factions/en_flag.png"
+			
+    	}
+
 	}
 }

@@ -1,5 +1,4 @@
 id,trigger,conditions,script,text,options,notes
-,,,,,,
 greetingSRSSFriendly,OpenCommLink,"$faction.id == solvaris
 $faction.friendlyToPlayer","$menuState = fleetConvMain 0
 FireAll PopulateOptions","A smile breaks over the $personRank ""Signal received $playerName. You're talking to the $personRank here, what can I do for you?"" 
@@ -10,7 +9,7 @@ greetingSRSSHostileWeaker,OpenCommLink,"$faction.id == solvaris
 $entity.isHostile
 $entity.relativeStrength < 0",,"""Hello $playerName What do you require?"" The $personRank's face is stoic but, behind them you catch hints of a panicked crew.
 OR
-The $personRank swallows when they see your face, ""Hello, $playerName…"" there's a slight pause before they continue, ""We can be going, now."" the transmission is then terminated as they start to turn away from the fleet.
+The $personRank swallows when they see your face, ""Hello, $playerNameï¿½"" there's a slight pause before they continue, ""We can be going, now."" the transmission is then terminated as they start to turn away from the fleet.
 ",cutCommLink:Cut the comm link,
 greetingSRSSHostileWeakerDefiant,OpenCommLink,"$faction.id == solvaris
 $entity.isHostile
@@ -43,3 +42,19 @@ OR
 The $personRank is curt as they speak, ""Turn on your transponder if you wish to discuss anything further.""
 ","turnOnTransponder:Turn your transponder on
 cutCommLink:Cut the comm link",
+greetingArgentFriendly,OpenCommLink,"$faction.id == argent
+$faction.friendlyToPlayer
+","$menuState = fleetConvMain 0
+FireAll PopulateOptions","The comms activate with a sharp digital chirp. A faceless avatar manifests. ""Identity verified. Argent network acknowledges your signature. Alliance protocols are active. State your query.""
+OR
+""Connection established. Processing... You are recognized as a non-hostile entity. Systems standing by for data transfer.""",,
+greetingArgentHostileWeaker,OpenCommLink,"$faction.id == argent
+$entity.isHostile
+$entity.relativeStrength < 0",,"""Scanning... Threat assessment complete. Combat probability of success: 12.4%. Logic dictates preservation of assets. We are withdrawing.""
+OR
+The voice is synthetic and flat. ""Engagement is tactically unsound. Re-routing fleet to avoid destruction. Do not pursue.""",,
+greetingArgentHostileStronger,OpenCommLink,"$faction.id == argent
+$entity.isHostile
+$entity.relativeStrength >= 0",,"""Intruder detected. Combat subroutines initialized. Your vessel has been targeted for termination.""
+OR
+""You are in violation of Argent airspace. Negotiation is irrelevant. Prepare for immediate disassembly.""",,

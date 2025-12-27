@@ -1,22 +1,12 @@
 name,id,designation,tech/manufacturer,system id,fleet pts,hitpoints,armor rating,max flux,8/6/5/4%,flux dissipation,ordnance points,fighter bays,max speed,acceleration,deceleration,max turn rate,turn acceleration,mass,shield type,defense id,shield arc,shield upkeep,shield efficiency,phase cost,phase upkeep,min crew,max crew,cargo,fuel,fuel/ly,range,max burn,base value,cr %/day,CR to deploy,peak CR sec,CR loss/sec,supplies/rec,supplies/mo,c/s,c/f,f/s,f/f,crew/s,crew/f,hints,tags,rarity,breakProb,minPieces,maxPieces,travel drive,number
-#SOLVARIS CAT,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-#FRIGATE CLASS,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-Perpetuation,srss_perpetuation,Frigate,Solvaris Remnant,displacer,8,4650,560,9870,2813,760,50,,210,200,175,90,270,200,OMNI,,120,0.2,0.8,,,15,25,30,20,1,20,11,36000,10,20,180,0.25,8,8,,,,,,,,"solvaris_bp, solvaris_en_bp, rare_bp, merc",0.75,0.5,2,2,,206
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-#DESTROYER CLASS,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-Stamina,srss_stamina,Destroyer,Solvaris Remnant,displacer,12,6520,940,12000,6667,810,100,,100,90,60,40,100,300,OMNI,,120,0.3,0.6,,,35,50,50,40,2,20,9,60000,5,20,300,0.25,12,12,,,,,,,,"solvaris_bp, solvaris_en_bp, rare_bp, merc",,0.7,2,3,,309
-Austerity,srss_austerity,Phase Destroyer,Solvaris Remnant,temporalshell,15,6850,860,12500,10000,750,100,,100,75,50,30,30,400,PHASE,phasecloak,90,,,0.05,0.04,25,50,60,100,2,50,9,120000,5,30,300,0.25,18,18,,,,,,,,"solvaris_bp, solvaris_en_bp, rare_bp, merc",1,0.5,2,3,,314
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-#CRUISER CLASS,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-Endurance,srss_endurance,Cruiser,Solvaris Remnant,temporalshell,17,9750,1620,15460,16000,980,165,,80,50,25,25,25,1800,OMNI,,180,0.5,0.6,,,75,200,150,90,3,30,8,200000,4,20,420,0.25,30,30,,,,,,,,"solvaris_bp, solvaris_en_bp, rare_bp, merc",,0.6,2,3,,405
-Continuance,srss_continuance,Light Cruiser,Solvaris Remnant,maneuveringjets,14,8250,1240,13500,14000,860,155,,60,40,30,15,20,1200,FRONT,,270,0.4,0.8,,,150,250,150,100,3,33,8,100000,3,12,480,0.25,20,20,,,,,,,,"solvaris_bp, solvaris_en_bp, rare_bp, merc",,0.5,2,3,,401
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-#CAPITAL CLASS,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-Determinant,srss_determinant,Superfreighter,Solvaris Remnant,displacer,7,10000,490,9560,5000,960,65,,25,5,2,3,2,4000,OMNI,,45,0.5,1,,,50,1000,2000,400,6,67,6,75000,2,20,720,0.25,10,10,200,333,,,,,"CIVILIAN, FREIGHTER","solvaris_bp, solvaris_en_bp, rare_bp, merc",,0.7,2,4,,502
-Determinant (Fuel),srss_determinant_fuel,Super Tanker,Solvaris Remnant,displacer,7,10000,490,9560,5000,960,65,,25,5,2,3,2,4000,OMNI,,45,0.5,1,,,50,1000,400,2000,6,67,6,75000,2,20,720,0.25,10,10,200,333,,,,,"CIVILIAN, FREIGHTER","solvaris_bp, solvaris_en_bp, rare_bp, merc",,0.7,2,4,,502
-Forbearance,srss_forbearance,Battleship,Solvaris Remnant,mote_control,30,19850,2150,37850,31250,1450,370,,60,20,15,15,10,3500,OMNI,,360,0.6,0.6,,,400,1000,300,300,10,30,7,500000,4,20,720,0.25,60,60,,,,,,,,"exilium_bp, rare_bp",0.5,0.6,2,4,,504
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-#FIGHTER CLASS,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-#Brave,en_brave,,Solvaris Remnant,temporalshell,,500,75,500,,100,0,,180,225,200,60,120,40,OMNI,,360,0.2,2,,,2,2,,,,,,,,,,,,,,,,,,,,"solvaris_bp, solvaris_en_bp, rare_bp, merc, ind",1,0,,,,300
+Austerity,srss_austerity,Phase Destroyer,Solvaris Remnant,mine_strike,15,6850,860,12500,400,750,120,,130,90,50,30,30,400,PHASE,phasecloak,90,,,0.05,0.04,25,50,60,100,2,50,9,120000,5,30,300,0.25,18,18,,,,,,,,"solvaris_bp, rare_bp, merc",1,0.5,2,3,,1
+Continuance,srss_continuance,Light Cruiser,Solvaris Remnant,temporalshell,14,8250,1240,13500,500,860,155,,60,40,30,15,20,1200,OMNI,,270,0.4,0.8,,,150,250,150,100,3,33,8,100000,3,12,480,0.25,20,20,,,,,,,,"solvaris_bp, rare_bp, merc",,0.5,2,3,,2
+Determinant,srss_determinant,Superfreighter,Solvaris Remnant,plasmajets,7,10000,490,9560,600,960,65,,25,5,2,3,2,4000,OMNI,,45,0.5,1,,,50,1000,2000,400,6,67,6,75000,2,20,720,0.25,10,10,200,333,,,,,"CIVILIAN, FREIGHTER","solvaris_bp, rare_bp, merc",,0.7,2,4,,3
+Determinant (Fuel),srss_determinant_fuel,Super Tanker,Solvaris Remnant,plasmajets,7,10000,490,9560,800,960,65,,25,5,2,3,2,4000,OMNI,,45,0.5,1,,,50,1000,400,2000,6,67,6,75000,2,20,720,0.25,10,10,200,333,,,,,"CIVILIAN, FREIGHTER","solvaris_bp, rare_bp, merc",,0.7,2,4,,4
+Endurance,srss_endurance,Cruiser,Solvaris Remnant,temporalshell,17,9750,1620,15460,400,980,165,,80,50,25,25,25,1800,OMNI,,180,0.5,0.6,,,75,200,150,90,3,30,8,200000,4,20,420,0.25,30,30,,,,,,,,"solvaris_bp, rare_bp, merc",,0.6,2,3,,5
+Forbearance,srss_forbearance,Battleship,Solvaris Remnant,mote_control,30,19850,2150,37850,800,1450,370,,60,20,15,15,10,3500,OMNI,,360,0.6,0.6,,,400,1000,300,300,10,30,7,500000,4,20,720,0.25,60,60,,,,,,,,"solvaris_bp, rare_bp, merc",0.5,0.6,2,4,,6
+Perpetuation,srss_perpetuation,Frigate,Solvaris Remnant,temporalshell,8,4650,560,11205,400,760,80,,300,200,175,90,20,200,OMNI,,120,0.2,0.8,,,15,25,30,20,1,20,11,36000,10,20,180,0.25,8,8,,,,,,,,"solvaris_bp, rare_bp, merc",0.75,0.5,2,2,,7
+Stamina,srss_stamina,Destroyer,Solvaris Remnant,plasmajets,12,6520,940,12000,600,810,100,,100,120,60,70,20,300,OMNI,,120,0.3,0.6,,,35,50,50,40,2,20,9,60000,5,20,300,0.25,12,12,,,,,,,,"solvaris_bp, rare_bp, merc",,0.7,2,3,,8
+Vortex,oracle_vortex,Frigate,Primodial Tech,solvaris_nova,1,6000,900,7000,400,900,50,,500,100,100,60,30,200,OMNI,,360,0.05,0.02,,,0,0,500,800,0.05,20,25,2500000,0.0001,1,1080,0.025,1,1,,,,,,,,exilium_bp,,0.7,2,3,,9
+Divergence,oracle_divergence,Cruiser,Primodial Tech,solvaris_surge,10,7000,950,8000,600,900,180,,400,100,100,60,30,500,OMNI,,360,0.05,0.02,,,0,0,500,800,0.05,20,25,5000000,0.001,1,1080,0.025,10,10,,,,,,,,exilium_bp,,0.7,2,3,,10
+Defiance,oracle_defiance,Cruiser,Primodial Tech,solvaris_singularity,15,8000,1000,9000,600,900,210,,300,100,100,60,30,1300,OMNI,,360,0.05,0.02,,,0,0,500,800,0.05,20,25,10000000,0.01,1,2160,0.025,15,15,,,,,,,,exilium_bp,,0.7,2,3,,11

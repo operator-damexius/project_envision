@@ -1,9 +1,16 @@
 {
     "displayName": "Omega",
-    "fluxCapacitors": 2,
-    "fluxVents": 0,
+    "fluxCapacitors": 10,
+    "fluxVents": 8,
     "hullId": "srss_perpetuation",
-    "hullMods": [],
+    "hullMods": [
+        "fluxcoil",
+        "fluxdistributor",
+        "fluxbreakers",
+        "shrouded_thunderhead",
+        "shrouded_mantle",
+        "shrouded_lens"
+    ],
     "permaMods": [],
     "sMods": [],
     "variantId": "srss_perpetuation_omega",
@@ -11,12 +18,12 @@
         {
             "autofire": false,
             "mode": "LINKED",
-            "weapons": {"WS0002": "phasecl"}
+            "weapons": {"WS0002": "sabotpod"}
         },
         {
             "autofire": false,
             "mode": "LINKED",
-            "weapons": {"WS0004": "resonatormrm"}
+            "weapons": {"WS0004": "sabotpod"}
         },
         {
             "autofire": false,

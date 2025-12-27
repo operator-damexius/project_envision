@@ -13,7 +13,9 @@
   "viewOffset": 0,
   "builtInMods": [
     "missile_reload",
-    "srss_order_core"
+    "solvaris_core",
+    "solvaris_grid",
+    "solvaris_prime_doctrine"
   ],
   "weaponSlots": [
     {

@@ -1,90 +1,91 @@
 {
-
-	# phase ships
 	"phaseSmall":{
-		"srss_austerity_standard":10,
+		"srss_austerity_standard":10
 	},
 	"phaseMedium":{		
-		"srss_austerity_standard":10,
+		"srss_austerity_standard":10
 	},
 	"phaseLarge":{		
-		"srss_austerity_standard":10,
+		"srss_austerity_standard":10
 	},
 	"phaseCapital":{		
-		"srss_austerity_standard":10,
+		"srss_austerity_standard":10
 	},
 
-	# combat ships
-	"combatSmall":
-	{
+	"combatSmall":{
 		"srss_austerity_standard":10,
 		"srss_continuance_standard":10,
 		"srss_endurance_standard":10,
 		"srss_forbearance_standard":10,
 		"srss_perpetuation_standard":10,
 		"srss_stamina_standard":10,
+		"oracle_vortex_F1":10,
+		"oracle_divergence_F1":10,
+		"oracle_defiance_F1":10
 	},
-    "combatMedium":
-	{
+    "combatMedium":{
 		"srss_austerity_standard":10,
 		"srss_continuance_standard":10,
 		"srss_endurance_standard":10,
 		"srss_forbearance_standard":10,
 		"srss_perpetuation_standard":10,
 		"srss_stamina_standard":10,
+		"oracle_vortex_F1":10,
+		"oracle_divergence_F1":10,
+		"oracle_defiance_F1":10
 	},
-    "combatLarge":
-	{
+    "combatLarge":{
 		"srss_austerity_standard":10,
 		"srss_continuance_standard":10,
 		"srss_endurance_standard":10,
 		"srss_forbearance_standard":10,
 		"srss_perpetuation_standard":10,
 		"srss_stamina_standard":10,
+		"oracle_vortex_F1":10,
+		"oracle_divergence_F1":10,
+		"oracle_defiance_F1":10
 	},
-    "combatCapital":
-	{
+    "combatCapital":{
 		"srss_austerity_standard":10,
 		"srss_continuance_standard":10,
 		"srss_endurance_standard":10,
 		"srss_forbearance_standard":10,
 		"srss_perpetuation_standard":10,
 		"srss_stamina_standard":10,
+		"oracle_vortex_F1":10,
+		"oracle_divergence_F1":10
 	},
 
-	# freighters and tankers
 	"freighterSmall":{
-		"srss_determinant_fuel_stardard":10,
-		"srss_determinant_stardard":10,
+		"srss_determinant_fuel_standard":10,
+		"srss_determinant_standard":10
 	},
 	"freighterMedium":{
-		"srss_determinant_fuel_stardard":10,
-		"srss_determinant_stardard":10,
+		"srss_determinant_fuel_standard":10,
+		"srss_determinant_standard":10
 	},
 	"freighterLarge":{
-		"srss_determinant_fuel_stardard":10,
-		"srss_determinant_stardard":10,
+		"srss_determinant_fuel_standard":10,
+		"srss_determinant_standard":10
 	},
 	"freighterCapital":{
-		"srss_determinant_fuel_stardard":10,
-		"srss_determinant_stardard":10,
+		"srss_determinant_fuel_standard":10,
+		"srss_determinant_standard":10
 	},
 	"tankerSmall":{
-		"srss_determinant_fuel_stardard":10,
-		"srss_determinant_stardard":10,
+		"srss_determinant_fuel_standard":10,
+		"srss_determinant_standard":10
 	},
 	"tankerMedium":{
-		"srss_determinant_fuel_stardard":10,
-		"srss_determinant_stardard":10,
+		"srss_determinant_fuel_standard":10,
+		"srss_determinant_standard":10
 	},
 	"tankerLarge":{
-		"srss_determinant_fuel_stardard":10,
-		"srss_determinant_stardard":10,
+		"srss_determinant_fuel_standard":10,
+		"srss_determinant_standard":10
 	},
 	"tankerCapital":{
-		"srss_determinant_fuel_stardard":10,
-		"srss_determinant_stardard":10,
-	},
-
-
+		"srss_determinant_fuel_standard":10,
+		"srss_determinant_standard":10
+	}
 }

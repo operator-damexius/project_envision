@@ -1,0 +1,52 @@
+{
+  "hullName": "Vortex",
+  "hullId": "oracle_vortex",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/ships/vortex/oracle_vortex.png",
+  "style": "HIGH_TECH",
+  "height": 100,
+  "width": 100,
+  "center": [50, 49],
+  "collisionRadius": 97.5,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 101.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "missile_reload",
+    "solvaris_regeneration",
+    "solvaris_synapse",
+    "solvaris_carapace",
+    "solvaris_instinct"
+  ],
+  "weaponSlots": [
+    { "id": "WS0002", "size": "SMALL", "type": "UNIVERSAL", "mount": "TURRET", "arc": 270, "angle": -0, "locations": [-15, 23] },
+    { "id": "WS0003", "size": "SMALL", "type": "UNIVERSAL", "mount": "TURRET", "arc": 270, "angle": 0, "locations": [-15, -23] },
+    { "id": "WS0005", "size": "MEDIUM", "type": "UNIVERSAL", "mount": "TURRET", "arc": 90, "angle": 0, "locations": [-2, -0] }
+  ],
+  "engineSlots": [
+    {
+      "location": [-29.5, -34.5], "length": 85.8, "width": 12.5, "angle": 169.5, "contrailSize": 12.5,
+      "style": "SOLVARIS_APEX"
+    },
+    {
+      "location": [-29.5, 34.5], "length": 85.8, "width": 12.5, "angle": -169.5, "contrailSize": 12.5,
+      "style": "SOLVARIS_APEX"
+    },
+    {
+      "location": [-32.5, -42.5], "length": 74.1, "width": 12.2, "angle": 169.5, "contrailSize": 12.2,
+      "style": "SOLVARIS_APEX"
+    },
+    {
+      "location": [-32.5, 42.5], "length": 74.1, "width": 12.2, "angle": -169.5, "contrailSize": 12.2,
+      "style": "SOLVARIS_APEX"
+    }
+  ],
+  "bounds": [
+    -33.5, 46.5,
+    48, 13.5,
+    30.5, 5.5,
+    30.5, -5.5,
+    48, -13.5,
+    -33.5, -46.5
+  ]
+}

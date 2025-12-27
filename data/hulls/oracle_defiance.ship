@@ -1,0 +1,216 @@
+{
+  "hullName": "Defiance",
+  "hullId": "oracle_defiance",
+  "hullSize": "CRUISER",
+  "spriteName": "graphics/ships/defiance/oracle_defiance.png",
+  "style": "HIGH_TECH",
+  "height": 250,
+  "width": 200,
+  "center": [100, 125],
+  "collisionRadius": 202.5,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 201.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "missile_reload",
+    "solvaris_regeneration",
+    "solvaris_synapse",
+    "solvaris_carapace",
+    "solvaris_instinct"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "LARGE",
+      "type": "UNIVERSAL",
+      "mount": "TURRET",
+      "arc": 80,
+      "angle": 0,
+      "locations": [10, -0]
+    },
+    {
+      "id": "WS0002",
+      "size": "MEDIUM",
+      "type": "UNIVERSAL",
+      "mount": "TURRET",
+      "arc": 40,
+      "angle": 0,
+      "locations": [38, -43]
+    },
+    {
+      "id": "WS0003",
+      "size": "MEDIUM",
+      "type": "UNIVERSAL",
+      "mount": "TURRET",
+      "arc": 40,
+      "angle": -0,
+      "locations": [38, 43]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "SYNERGY",
+      "mount": "TURRET",
+      "arc": 125,
+      "angle": -45,
+      "locations": [67, -68]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "SYNERGY",
+      "mount": "TURRET",
+      "arc": 125,
+      "angle": 45,
+      "locations": [67, 68]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "SYNERGY",
+      "mount": "TURRET",
+      "arc": 125,
+      "angle": -45,
+      "locations": [12, -56]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "SYNERGY",
+      "mount": "TURRET",
+      "arc": 125,
+      "angle": 45,
+      "locations": [12, 56]
+    },
+    {
+      "id": "WS0008",
+      "size": "SMALL",
+      "type": "SYNERGY",
+      "mount": "TURRET",
+      "arc": 125,
+      "angle": -45,
+      "locations": [-69, -31]
+    },
+    {
+      "id": "WS0009",
+      "size": "SMALL",
+      "type": "SYNERGY",
+      "mount": "TURRET",
+      "arc": 125,
+      "angle": 45,
+      "locations": [-69, 31]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-103.5, -30.5],
+      "length": 34.5,
+      "width": 1,
+      "angle": 180,
+      "contrailSize": 1,
+      "style": "SOLVARIS_APEX"
+    },
+    {
+      "location": [-103.5, 30.5],
+      "length": 34.5,
+      "width": 1,
+      "angle": -180,
+      "contrailSize": 1,
+      "style": "SOLVARIS_APEX"
+    },
+    {
+      "location": [-100.5, -27.5],
+      "length": 35.5,
+      "width": 1,
+      "angle": 180,
+      "contrailSize": 1,
+      "style": "SOLVARIS_APEX"
+    },
+    {
+      "location": [-100.5, 27.5],
+      "length": 35.5,
+      "width": 1,
+      "angle": -180,
+      "contrailSize": 1,
+      "style": "SOLVARIS_APEX"
+    },
+    {
+      "location": [-97.5, -24.5],
+      "length": 35,
+      "width": 1,
+      "angle": 180,
+      "contrailSize": 1,
+      "style": "SOLVARIS_APEX"
+    },
+    {
+      "location": [-97.5, 24.5],
+      "length": 35,
+      "width": 1,
+      "angle": -180,
+      "contrailSize": 1,
+      "style": "SOLVARIS_APEX"
+    },
+    {
+      "location": [-94.5, -21.5],
+      "length": 35,
+      "width": 1,
+      "angle": 180,
+      "contrailSize": 1,
+      "style": "SOLVARIS_APEX"
+    },
+    {
+      "location": [-94.5, 21.5],
+      "length": 35,
+      "width": 1,
+      "angle": -180,
+      "contrailSize": 1,
+      "style": "SOLVARIS_APEX"
+    },
+    {
+      "location": [-91.5, -18.5],
+      "length": 33.5,
+      "width": 1,
+      "angle": 180,
+      "contrailSize": 1,
+      "style": "SOLVARIS_APEX"
+    },
+    {
+      "location": [-91.5, 18.5],
+      "length": 33.5,
+      "width": 1,
+      "angle": -180,
+      "contrailSize": 1,
+      "style": "SOLVARIS_APEX"
+    },
+    {
+      "location": [-70, -1],
+      "length": 72.857277,
+      "width": 8.501234,
+      "angle": -141.5,
+      "contrailSize": 8.501234,
+      "style": "SOLVARIS_APEX"
+    },
+    {
+      "location": [-70, 1],
+      "length": 72.857277,
+      "width": 8.501234,
+      "angle": 141.5,
+      "contrailSize": 8.501234,
+      "style": "SOLVARIS_APEX"
+    }
+  ],
+  "bounds": [
+    -66.5, 6,
+    -106, 36.5,
+    -48, 28.5,
+    91, 86,
+    64.5, 24,
+    45, 17.5,
+    45, -17.5,
+    64.5, -24,
+    91, -86,
+    -48, -28.5,
+    -106, -36.5,
+    -66.5, -6
+  ]
+}

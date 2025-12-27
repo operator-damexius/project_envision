@@ -9,6 +9,6 @@
 		],
 		"music_solvaris_friendly":[
 			{"file":"en_music_solvaris_friendly.ogg","source":"sounds/music/","volume":0.50,"randomStart":false}
-		],
-  },
+		]
+  }
 }

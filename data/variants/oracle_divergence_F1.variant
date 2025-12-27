@@ -1,0 +1,58 @@
+{
+    "displayName": "F1",
+    "fluxCapacitors": 3,
+    "fluxVents": 0,
+    "goalVariant": true,
+    "hullId": "oracle_divergence",
+    "hullMods": [],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "oracle_divergence_F1",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0005": "resonatormrm",
+                "WS0006": "resonatormrm"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0002": "amsrm",
+                "WS0003": "amsrm",
+                "WS0004": "amsrm"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0001": "amsrm",
+                "WS0011": "amsrm",
+                "WS0012": "amsrm",
+                "WS0014": "amsrm",
+                "WS0015": "amsrm"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0009": "cryoflux",
+                "WS0010": "cryoflux",
+                "WS0013": "cryoflux"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0007": "shockrepeater",
+                "WS0008": "shockrepeater"
+            }
+        }
+    ]
+}

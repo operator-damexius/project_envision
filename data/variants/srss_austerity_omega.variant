@@ -1,7 +1,7 @@
 {
     "displayName": "Omega",
-    "fluxCapacitors": 2,
-    "fluxVents": 0,
+    "fluxCapacitors": 20,
+    "fluxVents": 2,
     "hullId": "srss_austerity",
     "hullMods": ["phase_anchor"],
     "permaMods": [],

@@ -1,0 +1,26 @@
+{
+    "displayName": "F1",
+    "fluxCapacitors": 10,
+    "fluxVents": 7,
+    "goalVariant": true,
+    "hullId": "oracle_vortex",
+    "hullMods": [],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "oracle_vortex_F1",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS0005": "cryoflux"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0002": "riftlance",
+                "WS0003": "riftlance"
+            }
+        }
+    ]
+}

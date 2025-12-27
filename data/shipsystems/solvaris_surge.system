@@ -1,0 +1,54 @@
+{
+	"id":"solvaris_surge",
+	"type":"STAT_MOD",
+	"aiType":"TEMPORAL_SHELL",
+	
+	"statsScript":"data.scripts.shipsystems.SolvarisSurgeStats",
+	
+	# VISUALS: THE ORANGE MIRAGE
+	
+	# 1. The Ghost Cloud (Teleporting Echoes)
+	# Deep Fiery Orange - Wide range to simulate erratic movement
+	"jitterUnderColor":[255, 100, 20, 120],
+	"jitterUnderCopies":10,
+	"jitterUnderMinRange":5,
+	"jitterUnderRange":25,
+	"jitterUnderRangeRadiusFraction":0,
+	
+	# 2. The Core Aura (The Real Ship?)
+	# Bright White-Orange
+	"jitterColor":[255, 220, 200, 80],
+	"jitterCopies":5,
+	"jitterMinRange":0,
+	"jitterRange":15,
+	"jitterRangeRadiusFraction":0,
+	
+	# 3. Engine Output
+	# Pure White Core
+	"engineGlowColor":[255, 255, 255, 255],
+	
+	# 4. Engine Contrails
+	# Bright Orange
+	"engineGlowContrailColor":[255, 140, 50, 50],
+	"engineGlowLengthMult":1.0,
+	"engineGlowWidthMult":1.0,
+	"engineGlowGlowMult":1.5,
+	
+	"soundFilterType":"LOWPASS",
+	"soundFilterGain":0.75,
+	"soundFilterGainHF":0.5,
+
+	"fadeActivationSoundOnChargedown":true,
+	"useSound":"system_temporalshell",
+	"loopSound":"system_temporalshell_loop",
+	"deactivateSound":"system_temporalshell_off",
+	"outOfUsesSound":"gun_out_of_ammo",
+	
+	"aiHints":{
+		"activeSpeedIncrease":200,
+		"burstMovementPotential":400,
+		"averageSpeedMult":2.0
+	},
+
+    "shortDescription":"Dilates time and generates a mirage field, scrambling enemy targeting sensors."
+}

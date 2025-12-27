@@ -13,7 +13,7 @@
 				"organics_plentiful",
 
 				"habitable",
-				"mild_climate",
+				"mild_climate"
 			],
 			"industries": [
 				"population",
@@ -23,11 +23,13 @@
 				"heavybatteries",
 				"starfortress_high",
 				"nehul_frame",
+				"solvaris_uplink",
+				"dzianis_outpost",
 
 				"mining",
 				"highcommand",
 				"farming",
-				"lightindustry",
+				"lightindustry"
 			]
 		},
 		{
@@ -43,7 +45,7 @@
 				
 				"rare_ore_rich",
 				"ore_rich",
-				"volatiles_diffuse",
+				"volatiles_diffuse"
 			],
 			"industries": [
 				"population",
@@ -56,7 +58,7 @@
 				"mining",
 				"orbitalworks",
 				"fuelprod",
-				"refining",
+				"refining"
 			]
 		},
 		{
@@ -76,7 +78,7 @@
 
 				"habitable",
 				"water_surface",
-				"mild_climate",
+				"mild_climate"
 			],
 			"industries": [
 				"population",
@@ -90,10 +92,11 @@
 				"highcommand",
 				"orbitalworks",
 				"commerce",
+				"solvaris_uplink"
 			]
 		},
 		{
-			"entities": ["solara"],
+			"entities": ["blackrock"],
 			"faction": "solvaris",
 			"size": 6,
 			"startingConditions": [
@@ -107,7 +110,7 @@
 				
 				"rare_ore_ultrarich",
 				"ore_rich",
-				"volatiles_diffuse",
+				"volatiles_diffuse"
 			],
 			"industries": [
 				"population",
@@ -120,7 +123,7 @@
 				"fuelprod",
 				"mining",
 				"highcommand",
-				"orbitalworks",
+				"orbitalworks"
 			]
 		}
 	]

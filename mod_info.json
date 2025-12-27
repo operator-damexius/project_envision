@@ -1,15 +1,20 @@
 {
-    "id":"solvaris_remnant",
-    "name":"Solvaris Remnant",
-    "author":"Damexius",
-    "version":{ "major": 0, "minor": 5, "patch": 2 },
-    "description":"Adds a new faction, the Solvaris Remnant, to the game.",
-    "gameVersion":"0.98a-RC11",
-    "modPlugin":"data.scripts.EnvisionModPlugin",
+    "id": "pro_envision",
+    "name": "Project Envision",
+    "author": "Damexius",
+    "version": "0.6.0",
+    "description": "Unknown variables have entered the sector equation. Strange, adaptive signals are emanating from the fringe, accompanied by fleets that defy standard classification. The Envision Protocol is active.",
+    "gameVersion": "0.98a-RC11",
+    "modPlugin": "data.scripts.EnvisionModPlugin",
     "utility": false,
     "dependencies": [
-        {"id": "lw_lazylib", "name": "LazyLib"},
-        {"id": "MagicLib", "name": "MagicLib"},
-        {"id": "nexerelin", "name": "Nexerelin"}
+        {
+            "id": "lw_lazylib",
+            "name": "LazyLib"
+        },
+        {
+            "id": "MagicLib",
+            "name": "MagicLib"
+        }
     ]
 }
