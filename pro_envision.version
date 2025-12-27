@@ -1,0 +1,11 @@
+{
+    "masterVersionFile":"https://raw.githubusercontent.com/operator-damexius/project_envision/master/pro_envision.version",
+    "modName":"Project Envision",
+    "modThreadId":54687,
+    "modVersion":
+    {
+        "major":0,
+        "minor":6,
+        "patch":0
+    }
+}
