@@ -180,12 +180,12 @@
     },
 
     "music":{
-       "theme":"music_solvaris_friendly",
-       "market_neutral":"music_solvaris_neutral",
-       "market_hostile":"music_solvaris_hostile",
-       "market_friendly":"music_solvaris_friendly",
-       "encounter_neutral":"music_solvaris_neutral",
-       "encounter_hostile":"music_solvaris_hostile",
-       "encounter_friendly":"music_solvaris_friendly"
+        "theme":"music_argent_neutral",
+        "market_neutral":"music_argent_neutral",
+        "market_hostile":"music_argent_hostile",
+        "market_friendly":"music_argent_friendly",
+        "encounter_neutral":"music_argent_encounter_neutral",
+        "encounter_hostile":"music_argent_encounter_hostile",
+        "encounter_friendly":"music_argent_encounter_friendly"
     }
 }

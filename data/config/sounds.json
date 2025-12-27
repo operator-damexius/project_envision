@@ -1,14 +1,34 @@
 {
   "music":{
-				
-		"music_solvaris_neutral":[
-			{"file":"en_music_solvaris_neutral.ogg","source":"sounds/music/","volume":0.50,"randomStart":false}
-		],
-		"music_solvaris_hostile":[
-			{"file":"en_music_solvaris_hostile.ogg","source":"sounds/music/","volume":0.50,"randomStart":false}
-		],
-		"music_solvaris_friendly":[
-			{"file":"en_music_solvaris_friendly.ogg","source":"sounds/music/","volume":0.50,"randomStart":false}
-		]
+        
+        "music_solvaris_neutral":[
+            {"file":"en_music_solvaris_neutral.ogg","source":"sounds/music/","volume":0.50,"randomStart":false}
+        ],
+        "music_solvaris_hostile":[
+            {"file":"en_music_solvaris_hostile.ogg","source":"sounds/music/","volume":0.50,"randomStart":false}
+        ],
+        "music_solvaris_friendly":[
+            {"file":"en_music_solvaris_friendly.ogg","source":"sounds/music/","volume":0.50,"randomStart":false}
+        ],
+
+        "music_argent_neutral":[
+            {"file":"en_music_argent_neutral.ogg","source":"sounds/music/","volume":0.70,"randomStart":false}
+        ],
+        "music_argent_hostile":[
+            {"file":"en_music_argent_hostile.ogg","source":"sounds/music/","volume":0.85,"randomStart":false}
+        ],
+        "music_argent_friendly":[
+            {"file":"en_music_argent_friendly.ogg","source":"sounds/music/","volume":0.70,"randomStart":false}
+        ],
+
+        "music_argent_encounter_neutral":[
+            {"file":"en_music_argent_neutral.ogg","source":"sounds/music/","volume":0.70,"randomStart":false}
+        ],
+        "music_argent_encounter_hostile":[
+            {"file":"en_music_argent_hostile.ogg","source":"sounds/music/","volume":0.85,"randomStart":false}
+        ],
+        "music_argent_encounter_friendly":[
+            {"file":"en_music_argent_friendly.ogg","source":"sounds/music/","volume":0.70,"randomStart":false}
+        ]
   }
 }
