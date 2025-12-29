@@ -1,5 +1,5 @@
 {
-    "masterVersionFile":"https://raw.githubusercontent.com/operator-damexius/project_envision/main/pro_envision.version",
+    "masterVersionFile":"https://raw.githubusercontent.com/operator-damexius/project_envision/refs/heads/master/pro_envision.version",
     "directDownloadURL":"https://github.com/operator-damexius/project_envision.git",
     "modName":"Project Envision",
     "modThreadId":0,
