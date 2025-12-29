@@ -6,7 +6,6 @@
     "colonyTargetValuator":"exerelin.campaign.colony.IndustrialColonyTargetValuator",
     "colonyExpeditionChance": 1.0,
     "morality":"good",
-    "spawnPoint": "nimoria",
     "vengeanceFleetSizeMult":1.25,
     "maxColonyDistance": 100,
 

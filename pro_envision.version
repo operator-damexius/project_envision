@@ -1,11 +1,12 @@
 {
     "masterVersionFile":"https://raw.githubusercontent.com/operator-damexius/project_envision/main/pro_envision.version",
+    "directDownloadURL":"https://github.com/operator-damexius/project_envision.git",
     "modName":"Project Envision",
     "modThreadId":0,
     "modVersion":
     {
         "major":0,
-        "minor":6,
-        "patch":1
+        "minor":7,
+        "patch":0
     }
 }

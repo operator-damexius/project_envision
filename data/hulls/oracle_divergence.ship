@@ -13,10 +13,10 @@
   "viewOffset": 0,
   "builtInMods": [
     "missile_reload",
-    "solvaris_regeneration",
-    "solvaris_synapse",
-    "solvaris_carapace",
-    "solvaris_instinct"
+    "MX_regeneration",
+    "MX_synapse",
+    "MX_carapace",
+    "MX_instinct"
   ],
   "weaponSlots": [
     {
@@ -162,7 +162,7 @@
       "width": 10,
       "angle": 180,
       "contrailSize": 10,
-      "style": "SOLVARIS_APEX"
+      "style": "XE_APEX"
     },
     {
       "location": [-60, 52],
@@ -170,7 +170,7 @@
       "width": 10,
       "angle": -180,
       "contrailSize": 10,
-      "style": "SOLVARIS_APEX"
+      "style": "XE_APEX"
     },
     {
       "location": [-70, -63.5],
@@ -178,7 +178,7 @@
       "width": 11,
       "angle": 180,
       "contrailSize": 11,
-      "style": "SOLVARIS_APEX"
+      "style": "XE_APEX"
     },
     {
       "location": [-70, 63.5],
@@ -186,7 +186,7 @@
       "width": 11,
       "angle": -180,
       "contrailSize": 11,
-      "style": "SOLVARIS_APEX"
+      "style": "XE_APEX"
     },
     {
       "location": [-28, -98.5],
@@ -194,7 +194,7 @@
       "width": 10,
       "angle": 170,
       "contrailSize": 10,
-      "style": "SOLVARIS_APEX"
+      "style": "XE_APEX"
     },
     {
       "location": [-28, 98.5],
@@ -202,7 +202,7 @@
       "width": 10,
       "angle": -170,
       "contrailSize": 10,
-      "style": "SOLVARIS_APEX"
+      "style": "XE_APEX"
     },
     {
       "location": [-28, 2],
@@ -210,7 +210,7 @@
       "width": 13,
       "angle": 150,
       "contrailSize": 13,
-      "style": "SOLVARIS_APEX"
+      "style": "XE_APEX"
     },
     {
       "location": [-28, -2],
@@ -218,7 +218,7 @@
       "width": 13,
       "angle": -150,
       "contrailSize": 13,
-      "style": "SOLVARIS_APEX"
+      "style": "XE_APEX"
     }
   ],
   "bounds": [

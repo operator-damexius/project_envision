@@ -1,0 +1,34 @@
+{
+	"starSystem": "seraphina",
+	"markets": [
+		{
+			"entities": ["nitru"],
+			"faction": "argent",
+			"size": 9,
+			"startingConditions": [
+				"population_9",
+				"solar_array",
+
+				"farmland_bountiful",
+				"organics_plentiful",
+
+				"habitable",
+				"mild_climate"
+			],
+			"industries": [
+				"population",
+				"megaport",
+
+				"waystation",
+				"heavybatteries",
+				"starfortress_high",
+				"solvaris_uplink",
+
+				"mining",
+				"highcommand",
+				"farming",
+				"lightindustry"
+			]
+		}
+	]
+}

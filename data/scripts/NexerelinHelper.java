@@ -4,11 +4,8 @@ import com.fs.starfarer.api.Global;
 import java.lang.reflect.Method;
 
 public class NexerelinHelper {
-    
-    /**
-     * SAFELY checks if the current game is running in "Corvus Mode" (Fixed Map).
-     * Uses Reflection so it compiles even if Nexerelin is missing.
-     */
+
+    // SAFELY checks if the current game is running in "Corvus Mode" (Fixed Map). Uses Reflection so it compiles even if Nexerelin is missing.
     public static boolean isCorvusMode() {
         // 1. Check if mod is even loaded
         if (!Global.getSettings().getModManager().isModEnabled("nexerelin")) {

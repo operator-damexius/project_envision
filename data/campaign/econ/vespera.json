@@ -4,9 +4,9 @@
 		{
 			"entities": ["nimoria"],
 			"faction": "solvaris",
-			"size": 6,
+			"size": 8,
 			"startingConditions": [
-				"population_6",
+				"population_8",
 				"industrial_polity",
 
 				"farmland_bountiful",
@@ -64,9 +64,9 @@
 		{
 			"entities": ["vesperis"],
 			"faction": "solvaris",
-			"size": 8,
+			"size": 10,
 			"startingConditions": [
-				"population_8",
+				"population_10",
 				"regional_capital",
 				"established_polity",
 				"industrial_polity",
@@ -105,12 +105,9 @@
 				"outpost",
 				
 				"very_hot",
-
 				"no_atmosphere",
-				
-				"rare_ore_ultrarich",
-				"ore_rich",
-				"volatiles_diffuse"
+				"ore_ultrarich",
+				"rare_ore_ultrarich"
 			],
 			"industries": [
 				"population",

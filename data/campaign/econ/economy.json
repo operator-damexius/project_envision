@@ -1,8 +1,6 @@
-{		   
-		"starSystems":
-			[
-			"vespera.json",
-			"vailara.json"
-			]
-
+{
+	"starSystems": [
+		"vespera.json", 
+		"seraphina.json"
+	]
 }
