@@ -1,7 +1,11 @@
 {
 
 	"designTypeColors":{
-		"solvaris": [0, 71, 143, 255]
+		"solvaris": [0, 71, 143, 255],
+		"argent": [100, 255, 200, 255],
+
+		"Solvaris Remnant": [0, 71, 143, 255],
+		"Exiliums Remnant": [100, 255, 200, 255]
 	},
 	
 	"graphics":{

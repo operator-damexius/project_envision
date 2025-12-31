@@ -18,9 +18,9 @@ public class UplinkPlugin extends BaseIndustry {
         int size = market.getSize();
         
         // --- BALANCED STATS ---
-        float fleetSizeMult = 1.25f;  // +25% Fleet Size (Strong, but fair)
-        float qualityFlat = 0.20f;    // +20% Quality
-        float defenseMult = 1.50f;    // +50% Ground Defense
+        float fleetSizeMult = 1.50f;  // +50% Fleet Size (Strong, but fair)
+        float qualityFlat = 0.50f;    // +50% Quality
+        float defenseMult = 1.75f;    // +75% Ground Defense
         float stabilityFlat = 0f;     // Base stability (0)
         
         String desc = "Argent Uplink Signal";

@@ -36,8 +36,8 @@ public class DysonHubPlugin extends BaseIndustry {
 
         // 4. BALANCED SUPPLY & DEMAND
         // A structure of this scale needs a massive workforce to operate.
-        demand(Commodities.CREW, 5);
-        demand(Commodities.HEAVY_MACHINERY, 5);
+        demand(Commodities.CREW, 1);
+        demand(Commodities.HEAVY_MACHINERY, 1);
         
         // Output reduced slightly to be "Legendary" but not "Infinite Credits"
         supply(Commodities.FUEL, 30);

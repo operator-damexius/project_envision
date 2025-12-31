@@ -15,9 +15,9 @@ public class DzianisPlugin extends BaseIndustry {
         int size = market.getSize();
         
         // --- BASE STATS (Elite Military Base) ---
-        float qualityFlat = 0.20f;    // +20% Quality (Better than average)
-        float defenseMult = 1.50f;    // x1.5 Defense (Strong fortification)
-        float fleetSizeMult = 1.25f;  // x1.25 Fleet Size (25% larger fleets)
+        float qualityFlat = 0.50f;    // +50% Quality (Better than average)
+        float defenseMult = 3.00f;    // x3.0 Defense (Strong fortification)
+        float fleetSizeMult = 1.75f;  // x1.75 Fleet Size (75% larger fleets)
         
         // Patrols (Base: Light + Medium)
         int lightPatrols = 1;
@@ -30,7 +30,7 @@ public class DzianisPlugin extends BaseIndustry {
         if (getAICoreId() != null && getAICoreId().equals(Commodities.ALPHA_CORE)) {
             qualityFlat = 0.50f;    // +50% Quality (Equiv. to Pristine Nanoforge)
             defenseMult = 2.00f;    // x2.0 Defense (Fortress World)
-            fleetSizeMult = 1.50f;  // x1.5 Fleet Size (50% larger - Massive but stable)
+            fleetSizeMult = 2.00f;  // x2.0 Fleet Size (100% larger - Massive but stable)
             
             heavyPatrols = 1;       // Unlocks Heavy Patrol
             desc = "Dzianis AI Warlord (Alpha)";

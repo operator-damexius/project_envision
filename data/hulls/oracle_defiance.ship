@@ -1,7 +1,7 @@
 {
   "hullName": "Defiance",
   "hullId": "oracle_defiance",
-  "hullSize": "CAPITAL_SHIP",
+  "hullSize": "CRUISER",
   "spriteName": "graphics/ships/defiance/oracle_defiance.png",
   "style": "HIGH_TECH",
   "height": 250,
