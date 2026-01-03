@@ -30,8 +30,7 @@
 
     "knownShips":{
         "tags":[
-            "solvaris_bp",
-            "exilium_bp"
+            "solvaris_bp"
         ],
         "hulls":[]
     },
@@ -64,8 +63,7 @@
             "solvaris_bp", 
             "midline_bp", 
             "hightech_bp", 
-            "missile_bp",
-            "omega"
+            "missile_bp"
         ],
         "weapons":[
             "railgun", 

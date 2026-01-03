@@ -21,7 +21,6 @@
         "luddic_path":-0.8,
         "remnant":1.0,
 
-
         "uaf":0.4,
         "mayasura":0.25,
         "ironshell":-0.4,
@@ -62,12 +61,45 @@
         "helps_allies", "stalwart", "likes_ai", "neutralist"
     ],
 
+    # --- STARTING FLEETS ---
+
+    # Frigate Starts
     "startShipsSolo":[
-        ["oracle_divergence_F1"], ["oracle_vortex_F1"], ["oracle_defiance_F1"]
+        ["oracle_divergence_F1"], 
+        ["oracle_vortex_F1"], 
+        ["oracle_defiance_F1"],
+        ["srss_perpetuation_standard"]
+    ],
+
+    # Destroyer Starts
+    "startShipsCombatSmall":[
+        ["srss_stamina_standard", "srss_perpetuation_standard"],
+        ["srss_austerity_standard", "srss_perpetuation_standard"]
+    ],
+
+    # Trade/Logistics Starts (Using the Fuel Capital as a heavy tanker option)
+    "startShipsTradeLarge":[
+        ["srss_determinant_fuel_standard", "srss_determinant_standard"]
+    ],
+
+    # Cruiser Starts
+    "startShipsCombatLarge":[
+        ["srss_endurance_standard", "srss_stamina_standard", "srss_perpetuation_standard"],
+        ["srss_continuance_standard", "srss_austerity_standard", "srss_perpetuation_standard"]
+    ],
+
+    # Carrier Starts (Using Continuance as it has launch bays)
+    "startShipsCarrierLarge":[
+        ["srss_continuance_standard", "srss_stamina_standard", "srss_perpetuation_standard"]
+    ],
+
+    # Capital/Super Ship Starts
+    "startShipsSuper":[
+        ["srss_forbearance_standard"]
     ],
 
     "startSpecialItems":[
-        [["solvaris_package",""]], [["exilium_core",""]], [["nanoforge_pristine",""]]
+        [["solvaris_package",""]], [["exilium_core",""]]
     ],
 
     "bonusSeeds":[

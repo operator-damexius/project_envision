@@ -1,0 +1,26 @@
+{
+	"baseHullId":"buffalo",
+	"skinHullId":"buffalo_solvaris",
+	"hullName":"Buffalo (SRSS)",
+	"descriptionId":"buffalo",  # optional
+	"descriptionPrefix":"This ship has been given Solvaris markings. Systems modifications are otherwise superficial.",
+	"tags":["solvaris_package"],
+	"tech":"Solvaris Remnant",
+	"fleetPoints":5,
+	"spriteName":"graphics/ships/buffalo/buffalo_solvaris.png",
+	"removeWeaponSlots":[], 		# ids
+	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
+	"removeBuiltInMods":[], 		# hullmod ids
+	"removeBuiltInWeapons":[], 		# weapon slot ids
+	"builtInMods":["solvaris_divine_architecture", "converted_hangar"],
+	"builtInWeapons":{
+    },
+    "engineSlotChanges":{
+		"0":{"style":"XE_CRYSTAL"},
+		"1":{"style":"XE_CRYSTAL"},
+		"2":{"style":"XE_CRYSTAL"},
+		"3":{"style":"XE_CRYSTAL"},
+		"4":{"style":"XE_CRYSTAL"},
+		"5":{"style":"XE_CRYSTAL"},
+	},
+}

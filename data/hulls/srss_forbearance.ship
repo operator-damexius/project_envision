@@ -13,9 +13,7 @@
   "viewOffset": 0,
   "builtInMods": [
     "missile_reload",
-    "solvaris_core",
-    "solvaris_grid",
-    "solvaris_prime_doctrine"
+    "solvaris_divine_architecture"
   ],
   "weaponSlots": [
     {
@@ -287,7 +285,7 @@
       "width": 15,
       "angle": 180,
       "contrailSize": 15,
-      "style": "HIGH_TECH"
+      "style": "XE_CRYSTAL"
     },
     {
       "location": [-177.5, 17],
@@ -295,7 +293,7 @@
       "width": 15,
       "angle": -180,
       "contrailSize": 15,
-      "style": "HIGH_TECH"
+      "style": "XE_CRYSTAL"
     },
     {
       "location": [-98, -70],
@@ -303,7 +301,7 @@
       "width": 15,
       "angle": 180,
       "contrailSize": 15,
-      "style": "HIGH_TECH"
+      "style": "XE_CRYSTAL"
     },
     {
       "location": [-98, 70],
@@ -311,7 +309,7 @@
       "width": 15,
       "angle": -180,
       "contrailSize": 15,
-      "style": "HIGH_TECH"
+      "style": "XE_CRYSTAL"
     },
     {
       "location": [-94, -81],
@@ -319,7 +317,7 @@
       "width": 3,
       "angle": 180,
       "contrailSize": 3,
-      "style": "HIGH_TECH"
+      "style": "XE_CRYSTAL"
     },
     {
       "location": [-94, 81],
@@ -327,7 +325,7 @@
       "width": 3,
       "angle": -180,
       "contrailSize": 3,
-      "style": "HIGH_TECH"
+      "style": "XE_CRYSTAL"
     },
     {
       "location": [-95, -78],
@@ -335,7 +333,7 @@
       "width": 3,
       "angle": 180,
       "contrailSize": 3,
-      "style": "HIGH_TECH"
+      "style": "XE_CRYSTAL"
     },
     {
       "location": [-95, 78],
@@ -343,7 +341,7 @@
       "width": 3,
       "angle": -180,
       "contrailSize": 3,
-      "style": "HIGH_TECH"
+      "style": "XE_CRYSTAL"
     },
     {
       "location": [-82.5, -104.5],
@@ -351,7 +349,7 @@
       "width": 13,
       "angle": 180,
       "contrailSize": 13,
-      "style": "HIGH_TECH"
+      "style": "XE_CRYSTAL"
     },
     {
       "location": [-82.5, 104.5],
@@ -359,7 +357,7 @@
       "width": 13,
       "angle": -180,
       "contrailSize": 13,
-      "style": "HIGH_TECH"
+      "style": "XE_CRYSTAL"
     },
     {
       "location": [-75.5, -121.5],
@@ -367,7 +365,7 @@
       "width": 13,
       "angle": 180,
       "contrailSize": 13,
-      "style": "HIGH_TECH"
+      "style": "XE_CRYSTAL"
     },
     {
       "location": [-75.5, 121.5],
@@ -375,7 +373,7 @@
       "width": 13,
       "angle": -180,
       "contrailSize": 13,
-      "style": "HIGH_TECH"
+      "style": "XE_CRYSTAL"
     },
     {
       "location": [-93.5, -84],
@@ -383,7 +381,7 @@
       "width": 3,
       "angle": 180,
       "contrailSize": 3,
-      "style": "HIGH_TECH"
+      "style": "XE_CRYSTAL"
     },
     {
       "location": [-93.5, 84],
@@ -391,7 +389,7 @@
       "width": 3,
       "angle": -180,
       "contrailSize": 3,
-      "style": "HIGH_TECH"
+      "style": "XE_CRYSTAL"
     },
     {
       "location": [-92.5, -87],
@@ -399,7 +397,7 @@
       "width": 3,
       "angle": 180,
       "contrailSize": 3,
-      "style": "HIGH_TECH"
+      "style": "XE_CRYSTAL"
     },
     {
       "location": [-92.5, 87],
@@ -407,7 +405,7 @@
       "width": 3,
       "angle": -180,
       "contrailSize": 3,
-      "style": "HIGH_TECH"
+      "style": "XE_CRYSTAL"
     },
     {
       "location": [-91.5, -90],
@@ -415,7 +413,7 @@
       "width": 3,
       "angle": 180,
       "contrailSize": 3,
-      "style": "HIGH_TECH"
+      "style": "XE_CRYSTAL"
     },
     {
       "location": [-91.5, 90],
@@ -423,7 +421,7 @@
       "width": 3,
       "angle": -180,
       "contrailSize": 3,
-      "style": "HIGH_TECH"
+      "style": "XE_CRYSTAL"
     },
     {
       "location": [-77.5, -129],
@@ -431,7 +429,7 @@
       "width": 12,
       "angle": 180,
       "contrailSize": 12,
-      "style": "HIGH_TECH"
+      "style": "XE_CRYSTAL"
     },
     {
       "location": [-77.5, 129],
@@ -439,7 +437,7 @@
       "width": 12,
       "angle": -180,
       "contrailSize": 12,
-      "style": "HIGH_TECH"
+      "style": "XE_CRYSTAL"
     },
     {
       "location": [-77.5, -137.5],
@@ -447,7 +445,7 @@
       "width": 9,
       "angle": 180,
       "contrailSize": 9,
-      "style": "HIGH_TECH"
+      "style": "XE_CRYSTAL"
     },
     {
       "location": [-77.5, 137.5],
@@ -455,7 +453,7 @@
       "width": 9,
       "angle": -180,
       "contrailSize": 9,
-      "style": "HIGH_TECH"
+      "style": "XE_CRYSTAL"
     }
   ],
   "bounds": [

@@ -13,10 +13,7 @@
   "viewOffset": 0,
   "builtInMods": [
     "missile_reload",
-    "MX_regeneration",
-    "MX_synapse",
-    "MX_carapace",
-    "MX_instinct"
+    "prima_core"
   ],
   "weaponSlots": [
     {
@@ -162,7 +159,7 @@
       "width": 10,
       "angle": 180,
       "contrailSize": 10,
-      "style": "XE_APEX"
+      "style": "XE_ORACLE"
     },
     {
       "location": [-60, 52],
@@ -170,7 +167,7 @@
       "width": 10,
       "angle": -180,
       "contrailSize": 10,
-      "style": "XE_APEX"
+      "style": "XE_ORACLE"
     },
     {
       "location": [-70, -63.5],
@@ -178,7 +175,7 @@
       "width": 11,
       "angle": 180,
       "contrailSize": 11,
-      "style": "XE_APEX"
+      "style": "XE_ORACLE"
     },
     {
       "location": [-70, 63.5],
@@ -186,7 +183,7 @@
       "width": 11,
       "angle": -180,
       "contrailSize": 11,
-      "style": "XE_APEX"
+      "style": "XE_ORACLE"
     },
     {
       "location": [-28, -98.5],
@@ -194,7 +191,7 @@
       "width": 10,
       "angle": 170,
       "contrailSize": 10,
-      "style": "XE_APEX"
+      "style": "XE_ORACLE"
     },
     {
       "location": [-28, 98.5],
@@ -202,7 +199,7 @@
       "width": 10,
       "angle": -170,
       "contrailSize": 10,
-      "style": "XE_APEX"
+      "style": "XE_ORACLE"
     },
     {
       "location": [-28, 2],
@@ -210,7 +207,7 @@
       "width": 13,
       "angle": 150,
       "contrailSize": 13,
-      "style": "XE_APEX"
+      "style": "XE_ORACLE"
     },
     {
       "location": [-28, -2],
@@ -218,7 +215,7 @@
       "width": 13,
       "angle": -150,
       "contrailSize": 13,
-      "style": "XE_APEX"
+      "style": "XE_ORACLE"
     }
   ],
   "bounds": [

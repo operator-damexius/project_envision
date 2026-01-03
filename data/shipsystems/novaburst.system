@@ -1,0 +1,46 @@
+{
+    "id":"novaburst",
+    "type":"STAT_MOD",
+    "aiType":"INTERDICTOR",
+    
+    "statsScript":"data.scripts.shipsystems.NovaBurstStats",
+
+    # VISUALS: ELECTRIC BLUE OVERCHARGE
+    "jitterUnderColor":[50,150,255,155],
+    "jitterUnderCopies":25,
+    "jitterUnderMinRange":0,
+    "jitterUnderRange":30,
+    "jitterUnderRangeRadiusFraction":0,
+    
+    "jitterColor":[100,200,255,55],
+    "jitterCopies":5,
+    "jitterMinRange":0,
+    "jitterRange":15,
+    "jitterRangeRadiusFraction":0,
+    
+    "weaponGlowColor":[50,150,255,155],
+    "weaponTypes":[ENERGY, BALLISTIC, MISSILE],
+    
+    "engineGlowColor":[50,100,255,255],
+    "engineGlowContrailColor":[50,100,200,50],
+    "engineGlowLengthMult":2,
+    "engineGlowWidthMult":1.5,
+    "engineGlowGlowMult":2,
+    
+    # AUDIO
+    "soundFilterType":"LOWPASS",
+    "soundFilterGain":0.8,
+    "soundFilterGainHF":0.25,
+    
+    "useSound":"system_emp_emitter_activate",
+    "loopSound":"system_high_energy_focus_loop",
+    "outOfUsesSound":"gun_out_of_ammo",
+    
+    # AI LOGIC
+    "aiHints":{
+        "threatRange":4000,
+        "threatAmount":600,
+        "threatAngle":0,
+        "threatArc":360
+    }
+}

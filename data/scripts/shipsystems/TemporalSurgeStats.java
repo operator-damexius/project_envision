@@ -6,7 +6,7 @@ import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.impl.combat.BaseShipSystemScript;
 
-public class SolvarisSurgeStats extends BaseShipSystemScript {
+public class TemporalSurgeStats extends BaseShipSystemScript {
 
     public static final float TIME_MULT = 3f;           
     public static final float SPEED_BONUS = 300f;       
@@ -14,8 +14,11 @@ public class SolvarisSurgeStats extends BaseShipSystemScript {
     public static final float ROF_BONUS = 1.5f;         
     public static final float FLUX_DISSIPATION = 2f;    
     
-    public static final Color JITTER_COLOR = new Color(255, 220, 200, 80); 
-    public static final Color JITTER_UNDER_COLOR = new Color(255, 100, 20, 150);
+    // NEW COLORS: "White Glowing Blue"
+    // Main Jitter: Bright White-Cyan
+    public static final Color JITTER_COLOR = new Color(200, 245, 255, 90); 
+    // Under Jitter: Deep Electric Blue (Creates the "mirage" depth)
+    public static final Color JITTER_UNDER_COLOR = new Color(50, 100, 255, 160);
 
     public void apply(MutableShipStatsAPI stats, String id, State state, float effectLevel) {
         ShipAPI ship = null;
@@ -25,19 +28,13 @@ public class SolvarisSurgeStats extends BaseShipSystemScript {
             return;
         }
 
-        // 1. SHIP ACCELERATION (Always applies to the user)
-        // This makes the ship move 3x faster relative to the game time.
+        // 1. SHIP ACCELERATION
         float timeMult = 1f + (TIME_MULT - 1f) * effectLevel;
         stats.getTimeMult().modifyMult(id, timeMult);
 
         // 2. GLOBAL TIME DILATION (PLAYER ONLY)
-        // Only slow the world down if the PLAYER is the one using the system.
-        // This prevents AI usage from annoying the player or stacking slowdowns.
         if (ship == Global.getCombatEngine().getPlayerShip()) {
             Global.getCombatEngine().getTimeMult().modifyMult(id, 1f / timeMult);
-        } else {
-            // Safety: If an AI uses it, ensure they don't accidentally apply the global slow
-            // (Note: We rely on unapply to clean up, but this is a double-check)
         }
 
         // 3. STAT BONUSES
@@ -51,12 +48,16 @@ public class SolvarisSurgeStats extends BaseShipSystemScript {
         stats.getEnergyRoFMult().modifyMult(id, ROF_BONUS);
         stats.getFluxDissipation().modifyMult(id, FLUX_DISSIPATION);
 
-        // 4. VISUALS
-        // We keep Jitter for everyone so you can see when an enemy is supercharged.
+        // 4. DEEP MIRAGE VISUALS
         if (effectLevel > 0) {
-            ship.setJitter(this, JITTER_COLOR, effectLevel, 5, 5f, 10f);
-            ship.setJitterUnder(this, JITTER_UNDER_COLOR, effectLevel, 10, 0f, 25f);
-            ship.getEngineController().fadeToOtherColor(this, JITTER_COLOR, new Color(0,0,0,0), effectLevel, 0.4f);
+            // "Ghost" Jitter: High copies (8), Low range variance (3f) = Solid Afterimage
+            ship.setJitter(this, JITTER_COLOR, effectLevel, 8, 3f, 10f);
+            
+            // "Displacement" Jitter: Lower copies (4), High range (35f) = Warping reality around the ship
+            ship.setJitterUnder(this, JITTER_UNDER_COLOR, effectLevel, 4, 0f, 35f);
+            
+            // Engine Shift: Turns engine contrails to the deep blue color
+            ship.getEngineController().fadeToOtherColor(this, JITTER_UNDER_COLOR, new Color(0,0,0,0), effectLevel, 0.5f);
         }
     }
 
@@ -64,8 +65,6 @@ public class SolvarisSurgeStats extends BaseShipSystemScript {
         ShipAPI ship = (ShipAPI) stats.getEntity();
 
         // 1. REMOVE GLOBAL DILATION
-        // Only attempt to remove the global slow if the Player was the one using it.
-        // This prevents an AI finishing their system from cancelling the Player's active slow motion.
         if (ship == Global.getCombatEngine().getPlayerShip()) {
             Global.getCombatEngine().getTimeMult().unmodify(id);
         }

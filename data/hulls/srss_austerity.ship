@@ -13,9 +13,8 @@
   "viewOffset": 0,
   "builtInMods": [
     "missile_reload",
-    "solvaris_core",
-    "solvaris_phase_coils",
-    "solvaris_prime_doctrine"
+    "solvaris_divine_architecture"
+
   ],
   "weaponSlots": [
     {
@@ -71,7 +70,7 @@
       "width": 15,
       "angle": 180,
       "contrailSize": 15,
-      "style": "HIGH_TECH"
+      "style": "XE_CRYSTAL"
     },
     {
       "location": [-44.5, -10.5],
@@ -79,7 +78,7 @@
       "width": 17,
       "angle": 180,
       "contrailSize": 17,
-      "style": "HIGH_TECH"
+      "style": "XE_CRYSTAL"
     },
     {
       "location": [-44.5, 10.5],
@@ -87,7 +86,7 @@
       "width": 17,
       "angle": -180,
       "contrailSize": 17,
-      "style": "HIGH_TECH"
+      "style": "XE_CRYSTAL"
     },
     {
       "location": [-44.5, -22.5],
@@ -95,7 +94,7 @@
       "width": 13,
       "angle": 180,
       "contrailSize": 13,
-      "style": "HIGH_TECH"
+      "style": "XE_CRYSTAL"
     },
     {
       "location": [-44.5, 22.5],
@@ -103,7 +102,7 @@
       "width": 13,
       "angle": -180,
       "contrailSize": 13,
-      "style": "HIGH_TECH"
+      "style": "XE_CRYSTAL"
     }
   ],
   "bounds": [

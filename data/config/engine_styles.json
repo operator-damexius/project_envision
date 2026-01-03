@@ -54,5 +54,43 @@
         "contrailSpawnDistMult":0.5,
         "contrailAngularVelocityMult":0.5,
         "type":"GLOW"
+    },
+
+    "XE_CRYSTAL":{
+        "mode":"QUAD_STRIP",
+        "engineColor":[240,255,255,255],
+        "contrailDuration":2.5,
+        "contrailWidthMult":1.0,
+        "contrailPartDuration":1.8,
+        "contrailColor":[200,240,255,40],
+        "glowSizeMult":1.0,
+        "glowColor":[220,250,255,235],
+        "omegaMode":true,
+        "omegaColor":[180,245,255,160],
+        
+        "contrailMaxSpeedMult":0.35, 
+        "contrailMinSpeedMult":0.35, 
+        "contrailSpawnDistMult":0.4,
+        "contrailAngularVelocityMult":0.5,
+        "type":"GLOW"
+    },
+
+    "XE_ORACLE":{
+        "mode":"QUAD_STRIP",
+        "engineColor":[255, 245, 225, 255],
+        "contrailDuration":2.5,
+        "contrailWidthMult":1.2,
+        "contrailPartDuration":1.5,
+        "contrailColor":[100, 200, 255, 30],
+        "glowSizeMult":1.0,
+        "glowColor":[255, 220, 150, 200],
+        "omegaMode":true,
+        "omegaColor":[255, 255, 255, 160],
+        
+        "contrailMaxSpeedMult":0.3, 
+        "contrailMinSpeedMult":0.3, 
+        "contrailSpawnDistMult":0.5,
+        "contrailAngularVelocityMult":0.5,
+        "type":"GLOW"
     }
 }

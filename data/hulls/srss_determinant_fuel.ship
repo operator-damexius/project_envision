@@ -13,9 +13,7 @@
   "viewOffset": 0,
   "builtInMods": [
     "missile_reload",
-    "solvaris_core",
-    "solvaris_grid",
-    "solvaris_prime_doctrine"
+    "solvaris_divine_architecture"
   ],
   "builtInWeapons": {
     "WS0006": "blinker_green",
@@ -113,7 +111,7 @@
       "width": 30,
       "angle": 180,
       "contrailSize": 30,
-      "style": "HIGH_TECH"
+      "style": "XE_CRYSTAL"
     },
     {
       "location": [-192.5, -17.5],
@@ -121,7 +119,7 @@
       "width": 25,
       "angle": -180,
       "contrailSize": 25,
-      "style": "HIGH_TECH"
+      "style": "XE_CRYSTAL"
     },
     {
       "location": [-192.5, 17.5],
@@ -129,7 +127,7 @@
       "width": 25,
       "angle": 180,
       "contrailSize": 25,
-      "style": "HIGH_TECH"
+      "style": "XE_CRYSTAL"
     },
     {
       "location": [-189.5, -34],
@@ -137,7 +135,7 @@
       "width": 20,
       "angle": 180,
       "contrailSize": 20,
-      "style": "HIGH_TECH"
+      "style": "XE_CRYSTAL"
     },
     {
       "location": [-189.5, 34],
@@ -145,7 +143,7 @@
       "width": 20,
       "angle": -180,
       "contrailSize": 20,
-      "style": "HIGH_TECH"
+      "style": "XE_CRYSTAL"
     },
     {
       "location": [-188, -44],
@@ -153,7 +151,7 @@
       "width": 13,
       "angle": 180,
       "contrailSize": 13,
-      "style": "HIGH_TECH"
+      "style": "XE_CRYSTAL"
     },
     {
       "location": [-188, 44],
@@ -161,7 +159,7 @@
       "width": 13,
       "angle": -180,
       "contrailSize": 13,
-      "style": "HIGH_TECH"
+      "style": "XE_CRYSTAL"
     }
   ],
   "bounds": [

@@ -12,11 +12,13 @@ The testing site is prepared for simulation to begin.
 The computer will comply.
 
 ENVIRONMENTAL HAZARD:
-[REDACTED]
+CLASS-O BLUE SUPERGIANT // EXTREME THERMAL FLUX
 
 DIRECTIVES:
-[REDACTED]
+1. EVALUATE SRSS PROTOTYPE CAPABILITIES.
+2. NEUTRALIZE SIMULATED HOSTILES.
+3. SURVIVE.
 
 ------------------------------------------------------
-"Troubleshooting is nature of individual abilities."
+"Troubleshooting is the nature of individual abilities."
 ------------------------------------------------------

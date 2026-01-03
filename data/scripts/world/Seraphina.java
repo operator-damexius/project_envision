@@ -199,18 +199,14 @@ public class Seraphina implements SectorGeneratorPlugin {
             PlanetAPI planet0 = system.addPlanet("nitru", seraphina_star, "Nitru", "terran", 90, 160, 14000, 500);
             
             // SURFACE: Deep Burgundy / Crimson
-            // Represents flora adapted to absorb Blue light and block UV radiation.
-            // Contrasts beautifully with the blue star.
             planet0.getSpec().setPlanetColor(new Color(180, 50, 70, 255));
             
             // ATMOSPHERE: Thick Ozone (Cyan-White)
-            // A dense, protective layer against the O-Class star's radiation.
             planet0.getSpec().setAtmosphereColor(new Color(150, 240, 255, 160));
             planet0.getSpec().setCloudColor(new Color(255, 255, 255, 200));
             planet0.getSpec().setAtmosphereThickness(0.65f); // Thicker air
             
             // GLOW: City Lights (Warm Gold)
-            // Population 9 means the entire night side is covered in cities.
             planet0.getSpec().setGlowTexture(Global.getSettings().getSpriteName("hab_glows", "banded"));
             planet0.getSpec().setGlowColor(new Color(255, 220, 150, 255)); 
             planet0.getSpec().setUseReverseLightForGlow(true);
@@ -218,19 +214,29 @@ public class Seraphina implements SectorGeneratorPlugin {
             planet0.applySpecChanges();
             planet0.setCustomDescriptionId("planet_nitru");
 
+            // =================================================================
+            // --- NITRU ORBITAL SHADES (Inner Defense) ---
+            // =================================================================
+            // 6 Shades orbiting at 490 (Inside the Sapphire Veil)
+            for (int i = 0; i < 6; i++) {
+                float angle = i * 60f; // 360 / 6 = 60 degrees apart
+                SectorEntityToken nitruShade = system.addCustomEntity("nitru_shade_" + i, "Nitru Orbital Shade", "stellar_shade", "argent");
+                // Orbiting planet0, angle, radius 490, period 25 (Orbiting fast)
+                nitruShade.setCircularOrbitPointingDown(planet0, angle, 490, 25);
+            }
+
             // RING: "The Sapphire Veil" (Natural Ring)
-            // Texture "rings_ice0" creates a natural, sparkly look.
-            // Color (50, 150, 255) is a bright, icy blue that catches the star's light.
+            // Radius 600 (Outer side of the shades)
             system.addRingBand(planet0, "misc", "rings_ice0", 256f, 1, new Color(50, 150, 255, 160), 256f, 600f, 40f, Terrain.RING, "The Sapphire Veil");
             
             Misc.initConditionMarket(planet0);
             MarketAPI Market0a = planet0.getMarket();
             Market0a.setSurveyLevel(MarketAPI.SurveyLevel.FULL);
             // Conditions tailored to a High-Tech Capital
-            Market0a.addCondition(Conditions.SOLAR_ARRAY); // Canonizes the ring
+            Market0a.addCondition(Conditions.SOLAR_ARRAY); 
             Market0a.addCondition(Conditions.POPULATION_9);
             Market0a.addCondition(Conditions.HABITABLE);
-            Market0a.addCondition(Conditions.MILD_CLIMATE); // Controlled by the array
+            Market0a.addCondition(Conditions.MILD_CLIMATE); 
             Market0a.addCondition(Conditions.FARMLAND_BOUNTIFUL);
             Market0a.addCondition(Conditions.ORGANICS_PLENTIFUL);
 

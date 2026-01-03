@@ -13,10 +13,7 @@
   "viewOffset": 0,
   "builtInMods": [
     "missile_reload",
-    "MX_regeneration",
-    "MX_synapse",
-    "MX_carapace",
-    "MX_instinct"
+    "prima_core"
   ],
   "weaponSlots": [
     { "id": "WS0002", "size": "SMALL", "type": "UNIVERSAL", "mount": "TURRET", "arc": 270, "angle": -0, "locations": [-15, 23] },
@@ -26,19 +23,19 @@
   "engineSlots": [
     {
       "location": [-29.5, -34.5], "length": 85.8, "width": 12.5, "angle": 169.5, "contrailSize": 12.5,
-      "style": "XE_APEX"
+      "style": "XE_ORACLE"
     },
     {
       "location": [-29.5, 34.5], "length": 85.8, "width": 12.5, "angle": -169.5, "contrailSize": 12.5,
-      "style": "XE_APEX"
+      "style": "XE_ORACLE"
     },
     {
       "location": [-32.5, -42.5], "length": 74.1, "width": 12.2, "angle": 169.5, "contrailSize": 12.2,
-      "style": "XE_APEX"
+      "style": "XE_ORACLE"
     },
     {
       "location": [-32.5, 42.5], "length": 74.1, "width": 12.2, "angle": -169.5, "contrailSize": 12.2,
-      "style": "XE_APEX"
+      "style": "XE_ORACLE"
     }
   ],
   "bounds": [

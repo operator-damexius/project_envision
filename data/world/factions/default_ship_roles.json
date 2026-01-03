@@ -57,6 +57,7 @@
 	},
 
 	"freighterSmall":{
+		"srss_buffalo_standard":10,
 		"srss_determinant_fuel_standard":10,
 		"srss_determinant_standard":10
 	},

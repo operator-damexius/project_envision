@@ -30,7 +30,7 @@
 
     "knownShips":{
         "tags":[
-            "remnant", 
+            "remnant",
             "exilium_bp",
             "omega"
         ],
@@ -46,7 +46,7 @@
     
     "knownFighters":{
         "tags":[
-            "remnant", 
+            "remnant",
             "omega"
         ],
         "fighters":[]
@@ -54,9 +54,9 @@
     
     "knownWeapons":{
         "tags":[
-            "remnant", 
-            "hightech_bp", 
-            "energy_bp", 
+            "remnant",
+            "hightech_bp",
+            "energy_bp",
             "missile_bp",
             "omega"
         ],

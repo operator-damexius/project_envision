@@ -16,7 +16,7 @@ import com.fs.starfarer.api.util.Misc;
 import org.dark.shaders.distortion.DistortionShader;
 import org.dark.shaders.distortion.RippleDistortion;
 
-public class SolvarisSingularityStats extends BaseShipSystemScript {
+public class SingularityStats extends BaseShipSystemScript {
 
     // --- CONFIGURATION ---
     public static final float ACTIVE_TIME = 10f;     
@@ -24,24 +24,28 @@ public class SolvarisSingularityStats extends BaseShipSystemScript {
     public static final float PULL_STRENGTH = 3000f; 
     public static final float KILL_RADIUS = 450f;    
     
-    // MELTING CONFIG
-    // 9000 DPS = Very fast, painful death.
-    // Ships will survive deep inside the hole for several seconds.
     public static final float MELT_DPS = 9000f; 
     
-    // --- COLORS ---
-    public static final Color VOID_COLOR = new Color(0, 0, 0, 255); 
-    public static final Color PHOTON_RING = new Color(200, 150, 255, 100); 
-    public static final Color RING_INNER = new Color(160, 80, 255, 200); 
-    public static final Color RING_MID = new Color(100, 0, 200, 150);    
-    public static final Color RING_OUTER = new Color(60, 0, 150, 100);   
+    // --- COLORS (WHITE CLOUD THEME) ---
+    // The "Hole" is now a blinding white core (Dense Energy)
+    public static final Color VOID_COLOR = new Color(255, 255, 255, 255); 
+    public static final Color PHOTON_RING = new Color(220, 240, 255, 150); 
     
-    public static final Color WARNING_COLOR = new Color(255, 50, 50, 200); 
-    public static final Color ARC_CORE = new Color(255, 200, 200, 255);
-    public static final Color ARC_FRINGE = new Color(200, 50, 50, 200);
+    // The "Swirl" is now layers of mist and clouds
+    public static final Color RING_INNER = new Color(255, 255, 255, 210); // Dense cloud
+    public static final Color RING_MID = new Color(220, 235, 255, 140);   // Wispy cloud
+    public static final Color RING_OUTER = new Color(200, 220, 240, 50);  // Faint mist
     
-    public static final Color MELT_COLOR = new Color(255, 100, 50, 150);
-    public static final Color JITTER_COLOR = new Color(255, 50, 0, 80);
+    // Warning Flash
+    public static final Color WARNING_COLOR = new Color(200, 255, 255, 220); 
+    
+    // Lightning
+    public static final Color ARC_CORE = new Color(255, 255, 255, 255);
+    public static final Color ARC_FRINGE = new Color(180, 220, 255, 200);
+    
+    // Damage Effects (Dissolving into light)
+    public static final Color MELT_COLOR = new Color(255, 255, 255, 180);
+    public static final Color JITTER_COLOR = new Color(200, 255, 255, 100);
 
     private Vector2f targetLocation = null;
     private boolean isCharging = false;
@@ -73,20 +77,21 @@ public class SolvarisSingularityStats extends BaseShipSystemScript {
                 }
             }
             
-            // Visual Guide: Lightning Stream
+            // Visual Guide: Divine Lightning
             if (Math.random() > 0.6) {
                 engine.spawnEmpArcVisual(
                     ship.getLocation(), ship, targetLocation, null,
-                    15f, ARC_CORE, ARC_FRINGE
+                    25f, ARC_CORE, ARC_FRINGE
                 );
             }
 
-            // Visual Warning: Implosion
+            // Visual Warning: Gathering Clouds
             if (Math.random() > 0.5) {
                 Vector2f spawnPoint = MathUtils_getRandomPointInCircle(targetLocation, 900f * effectLevel);
                 Vector2f vel = Vector2f.sub(targetLocation, spawnPoint, null);
                 vel.scale(4.0f); 
-                engine.addHitParticle(spawnPoint, vel, 15f, 2f, 0.4f, WARNING_COLOR);
+                // Larger particles for cloud effect
+                engine.addHitParticle(spawnPoint, vel, 25f, 2f, 0.5f, WARNING_COLOR);
             }
             
             Global.getSoundPlayer().playLoop("system_entropy_loop", ship, 1.0f + effectLevel, 0.6f, targetLocation, new Vector2f(0,0));
@@ -104,22 +109,21 @@ public class SolvarisSingularityStats extends BaseShipSystemScript {
             if (scale <= 0.01f) return; 
             if (targetLocation == null) return; 
 
-            // --- A. VISUALS (PURE MATH - NO SPRITES) ---
+            // --- A. VISUALS (THE WHITE STORM) ---
             
-            // 1. The Particle Swirl (Accretion Disk)
-            // Thousands of tiny dots spinning.
-            spawnRingParticles(engine, targetLocation, 450f * scale, 15, 500f, 200f, RING_INNER, 35f);
-            spawnRingParticles(engine, targetLocation, 750f * scale, 10, 300f, 100f, RING_MID, 50f);
-            spawnRingParticles(engine, targetLocation, 1200f * scale, 5, 150f, 50f, RING_OUTER, 80f);
+            // 1. The Cloud Swirl
+            spawnRingParticles(engine, targetLocation, 450f * scale, 15, 500f, 200f, RING_INNER, 60f);
+            spawnRingParticles(engine, targetLocation, 750f * scale, 10, 300f, 100f, RING_MID, 80f);
+            spawnRingParticles(engine, targetLocation, 1200f * scale, 5, 150f, 50f, RING_OUTER, 120f);
 
-            // 2. The Core (Generated Circles)
+            // 2. The Core (Blinding Star)
             // Photon Ring (Glow behind)
-            engine.addSmoothParticle(targetLocation, new Vector2f(0,0), 420f * scale, 1f, 0.1f, PHOTON_RING);
-            // Event Horizon (Black Void on top)
+            engine.addSmoothParticle(targetLocation, new Vector2f(0,0), 450f * scale, 1f, 0.1f, PHOTON_RING);
+            // Dense Core (White Sphere on top)
             engine.addSmoothParticle(targetLocation, new Vector2f(0,0), 380f * scale, 1f, 0.1f, VOID_COLOR);
             engine.addSmoothParticle(targetLocation, new Vector2f(0,0), 350f * scale, 1f, 0.1f, VOID_COLOR);
 
-            // --- B. DISTORTION ---
+            // --- B. DISTORTION (Heat Haze) ---
             if (Global.getSettings().getModManager().isModEnabled("shaderLib")) {
                 RippleDistortion gravityWell = new RippleDistortion(targetLocation, new Vector2f(0,0));
                 gravityWell.setSize(1800f * scale); 
@@ -129,12 +133,12 @@ public class SolvarisSingularityStats extends BaseShipSystemScript {
                 DistortionShader.addDistortion(gravityWell);
             }
 
-            // --- C. PHYSICS (ALLY SAFE) ---
+            // --- C. PHYSICS ---
             if (state == State.ACTIVE) {
                 List<ShipAPI> targets = engine.getShips();
                 for (ShipAPI target : targets) {
                     if (target == ship) continue; 
-                    if (target.getOwner() == ship.getOwner()) continue; // <--- ALLY IMMUNITY
+                    if (target.getOwner() == ship.getOwner()) continue;
                     if (target.isPhased()) continue; 
                     
                     float dist = Misc.getDistance(targetLocation, target.getLocation());
@@ -160,43 +164,40 @@ public class SolvarisSingularityStats extends BaseShipSystemScript {
                         float angleToHole = Misc.getAngleInDegrees(target.getLocation(), targetLocation);
                         target.setFacing(Misc.normalizeAngle(angleToHole));
                         
-                        // --- D. THE MELTING ZONE ---
+                        // --- D. THE DISSOLUTION ZONE ---
                         if (dist < KILL_RADIUS) {
                             
-                            // 1. ALIVE: SLOW MELT
+                            // 1. ALIVE: BURNING IN LIGHT
                             if (!target.isHulk()) {
                                 engine.applyDamage(
                                     target, target.getLocation(), 
-                                    MELT_DPS * engine.getElapsedInLastFrame(), // 9000 DPS
+                                    MELT_DPS * engine.getElapsedInLastFrame(),
                                     DamageType.ENERGY, 
                                     0f, true, false, ship
                                 );
                                 
-                                // Visuals: The Ship is struggling
                                 target.setJitter(id, JITTER_COLOR, 1.0f, 3, 5f + (float)Math.random() * 5f);
                                 if (Math.random() > 0.5) {
                                     Vector2f rndLoc = MathUtils_getRandomPointInCircle(target.getLocation(), target.getCollisionRadius());
-                                    engine.addHitParticle(rndLoc, target.getVelocity(), 5f, 1f, 0.5f, MELT_COLOR);
+                                    engine.addHitParticle(rndLoc, target.getVelocity(), 15f, 1f, 0.5f, MELT_COLOR);
                                 }
                             }
                             
-                            // 2. DEAD: SLOW DIGESTION
+                            // 2. DEAD: FADING INTO WHITE
                             else {
                                 float currentAlpha = target.getExtraAlphaMult();
-                                // Fade extremely slowly (0.5% per frame) so you can watch the wreck spin
                                 target.setExtraAlphaMult(currentAlpha * 0.995f); 
                                 
                                 if (Math.random() > 0.5) {
                                     Vector2f debrisLoc = MathUtils_getRandomPointInCircle(target.getLocation(), target.getCollisionRadius());
                                     Vector2f debrisVel = Vector2f.sub(targetLocation, debrisLoc, null);
                                     debrisVel.scale(2.0f); 
-                                    engine.addHitParticle(debrisLoc, debrisVel, 4f, 0.5f, 0.3f, Color.gray);
+                                    engine.addHitParticle(debrisLoc, debrisVel, 10f, 0.5f, 0.4f, Color.white);
                                 }
 
-                                // Only delete when almost invisible
                                 if (currentAlpha < 0.1f) {
                                     engine.removeEntity(target);
-                                    engine.spawnExplosion(targetLocation, new Vector2f(0,0), VOID_COLOR, 100f, 0.5f);
+                                    engine.spawnExplosion(targetLocation, new Vector2f(0,0), VOID_COLOR, 150f, 1.0f);
                                 }
                             }
                         }
@@ -216,9 +217,10 @@ public class SolvarisSingularityStats extends BaseShipSystemScript {
             suckVel.normalise();
             suckVel.scale(suckSpeed);
             Vector2f finalVel = Vector2f.add(orbitVel, suckVel, null);
-            float pSize = sizeBase + (float)Math.random() * 15f;
-            float dur = 0.3f + (float)Math.random() * 0.3f; 
-            engine.addHitParticle(spawnLoc, finalVel, pSize, 0.7f, dur, color);
+            
+            float pSize = sizeBase + (float)Math.random() * 30f;
+            float dur = 0.4f + (float)Math.random() * 0.4f; 
+            engine.addHitParticle(spawnLoc, finalVel, pSize, 0.6f, dur, color);
         }
     }
 
@@ -245,8 +247,8 @@ public class SolvarisSingularityStats extends BaseShipSystemScript {
     }
 
     public StatusData getStatusData(int index, State state, float effectLevel) {
-        if (state == State.IN) return new StatusData("CHARGING SINGULARITY", true);
-        if (state == State.ACTIVE) return new StatusData("EVENT HORIZON ACTIVE", true);
+        if (state == State.IN) return new StatusData("CONJURING STORM", true);
+        if (state == State.ACTIVE) return new StatusData("SINGULARITY ACTIVE", true);
         return null;
     }
 }

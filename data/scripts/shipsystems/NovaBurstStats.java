@@ -17,17 +17,19 @@ import org.dark.shaders.distortion.RippleDistortion;
 import org.dark.shaders.light.LightShader;
 import org.dark.shaders.light.StandardLight;
 
-public class SolvarisNovaStats extends BaseShipSystemScript {
+public class NovaBurstStats extends BaseShipSystemScript {
 
     // --- CONFIGURATION ---
     public static final float RANGE = 4000f;        
     public static final float EMP_DAMAGE = 100000f; 
     public static final float HULL_DAMAGE = 1000f;  
-    public static final float KICKBACK = 600f;      
     
-    // --- VISUAL COLORS ---
-    public static final Color PARTICLE_CORE = new Color(200, 255, 255, 255);
-    public static final Color FLASH_COLOR = new Color(100, 220, 255, 255); 
+    // --- VISUAL COLORS (BLUEISH WHITE BURST) ---
+    // Core is blinding pure white
+    public static final Color PARTICLE_CORE = new Color(255, 255, 255, 255);
+    // Flash is a sharp, electric ice-blue
+    public static final Color FLASH_COLOR = new Color(180, 220, 255, 255); 
+    // Invisible for EMP arcs (we use the glow instead)
     public static final Color INVISIBLE = new Color(0, 0, 0, 0);
 
     private boolean hasFired = false;
@@ -53,6 +55,7 @@ public class SolvarisNovaStats extends BaseShipSystemScript {
                 Vector2f vel = Vector2f.sub(ship.getLocation(), spawnLoc, null);
                 vel.scale(2.0f);
                 
+                // Charge particles are icy blue
                 Global.getCombatEngine().addHitParticle(spawnLoc, vel, 10f, 0.5f, 0.5f, FLASH_COLOR);
             }
         }
@@ -84,9 +87,12 @@ public class SolvarisNovaStats extends BaseShipSystemScript {
             }
             
             // --- B. VANILLA VISUALS ---
+            // Large expanding flash
             engine.addSmoothParticle(loc, vel, 2000f, 1.0f, 0.5f, FLASH_COLOR);
+            // Smaller, brighter core flash
             engine.addSmoothParticle(loc, vel, 1500f, 1.0f, 0.3f, Color.WHITE);
 
+            // The "Shockwave" Ring of particles
             for (int i = 0; i < 360; i += 1) { 
                 float angle = (float) Math.toRadians(i);
                 Vector2f pVel = new Vector2f((float)Math.cos(angle) * 5000f, (float)Math.sin(angle) * 5000f);
@@ -100,7 +106,7 @@ public class SolvarisNovaStats extends BaseShipSystemScript {
             List<ShipAPI> targets = engine.getShips();
             for (ShipAPI target : targets) {
                 if (target == ship) continue; 
-                if (target.getOwner() == ship.getOwner()) continue; // <--- ALLY IMMUNITY ADDED HERE
+                if (target.getOwner() == ship.getOwner()) continue; // Ally Immunity
                 if (target.isHulk()) continue;
                 if (target.isPhased()) continue;
 
@@ -126,10 +132,7 @@ public class SolvarisNovaStats extends BaseShipSystemScript {
                     target.getFluxTracker().increaseFlux(target.getFluxTracker().getMaxFlux() * 0.5f, true);
                 }
 
-                float angle = Misc.getAngleInDegrees(loc, target.getLocation());
-                float angleRad = (float)Math.toRadians(angle);
-                Vector2f push = new Vector2f((float)Math.cos(angleRad) * KICKBACK, (float)Math.sin(angleRad) * KICKBACK);
-                Vector2f.add(target.getVelocity(), push, target.getVelocity());
+                // Removed Kickback/Push logic here
             }
             hasFired = true; 
         }

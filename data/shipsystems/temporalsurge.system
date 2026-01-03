@@ -1,0 +1,55 @@
+{
+    "id":"temporalsurge",
+    "type":"STAT_MOD",
+    "aiType":"TEMPORAL_SHELL",
+    
+    "statsScript":"data.scripts.shipsystems.TemporalSurgeStats",
+    
+    # VISUALS: THE DIVINE MIRAGE
+    # "Deeper meaning": The ship exists in multiple seconds at once.
+    
+    # 1. The Time Distortion (Deep Reality Tear)
+    # Deep Electric Blue - High range to simulate warping space
+    "jitterUnderColor":[50, 100, 255, 155],
+    "jitterUnderCopies":8,
+    "jitterUnderMinRange":2,
+    "jitterUnderRange":35,
+    "jitterUnderRangeRadiusFraction":0,
+    
+    # 2. The Quantum Echo (The Ghost Ship)
+    # Bright White-Cyan - Tight to the hull
+    "jitterColor":[200, 245, 255, 100],
+    "jitterCopies":4,
+    "jitterMinRange":0,
+    "jitterRange":10,
+    "jitterRangeRadiusFraction":0,
+    
+    # 3. Engine Output
+    # Pure White Core (Divine Source)
+    "engineGlowColor":[255, 255, 255, 255],
+    
+    # 4. Engine Contrails
+    # Matching the "XE_ORACLE" Blue wake
+    "engineGlowContrailColor":[100, 200, 255, 60],
+    "engineGlowLengthMult":1.5,
+    "engineGlowWidthMult":1.2,
+    "engineGlowGlowMult":2.0,
+    
+    "soundFilterType":"LOWPASS",
+    "soundFilterGain":0.6,
+    "soundFilterGainHF":0.2,
+
+    "fadeActivationSoundOnChargedown":true,
+    "useSound":"system_temporalshell",
+    "loopSound":"system_temporalshell_loop",
+    "deactivateSound":"system_temporalshell_off",
+    "outOfUsesSound":"gun_out_of_ammo",
+    
+    "aiHints":{
+        "activeSpeedIncrease":300,
+        "burstMovementPotential":600,
+        "averageSpeedMult":3.0
+    },
+
+    "shortDescription":"Accelerates local time flow while projecting a divine mirage of potential futures, confusing enemy sensors."
+}
