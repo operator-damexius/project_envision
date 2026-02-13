@@ -1,0 +1,99 @@
+{
+    "displayName": "Standard",
+    "fluxCapacitors": 13,
+    "fluxVents": 0,
+    "goalVariant": true,
+    "hullId": "siv_tenacity",
+    "hullMods": [
+        "defensive_targeting_array",
+        "recovery_shuttles",
+        "expanded_deck_crew",
+        "fluxbreakers",
+        "advancedshieldemitter"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "siv_tenacity_standard",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS0013": "tachyonlance"}
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0009": "heatseeker",
+                "WS0010": "heatseeker",
+                "WS0011": "heatseeker",
+                "WS0012": "heatseeker"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0020": "dragon",
+                "WS0021": "dragon",
+                "WS0022": "dragon",
+                "WS0023": "dragon",
+                "WS0028": "dragon",
+                "WS0029": "dragon"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0026": "swarmer",
+                "WS0027": "swarmer"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0003": "heavyneedler",
+                "WS0004": "heavyneedler",
+                "WS0016": "heavyneedler",
+                "WS0017": "heavyneedler",
+                "WS0018": "heavyneedler",
+                "WS0019": "heavyneedler"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0001": "guardian",
+                "WS0002": "guardian"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0005": "lrpdlaser",
+                "WS0006": "lrpdlaser",
+                "WS0007": "lrpdlaser",
+                "WS0008": "lrpdlaser",
+                "WS0014": "lrpdlaser",
+                "WS0015": "lrpdlaser",
+                "WS0024": "lrpdlaser",
+                "WS0025": "lrpdlaser",
+                "WS0030": "lrpdlaser"
+            }
+        }
+    ],
+    "wings": [
+        "wasp_wing",
+        "wasp_wing",
+        "wasp_wing",
+        "wasp_wing",
+        "dagger_wing",
+        "dagger_wing",
+        "dagger_wing",
+        "dagger_wing"
+    ]
+}

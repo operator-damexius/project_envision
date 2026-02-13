@@ -1,0 +1,65 @@
+{
+    "displayName": "Standard",
+    "fluxCapacitors": 30,
+    "fluxVents": 9,
+    "goalVariant": true,
+    "hullId": "oracle_reclaimer",
+    "hullMods": [
+        "shrouded_lens",
+        "shrouded_mantle",
+        "shrouded_thunderhead",
+        "fluxbreakers",
+        "fluxdistributor",
+        "fluxcoil",
+        "efficiency_overhaul",
+        "insulatedengine",
+        "turretgyros",
+        "armoredweapons",
+        "magazines",
+        "dedicated_targeting_core",
+        "missleracks",
+        "hardenedshieldemitter",
+        "heavyarmor",
+        "pointdefenseai"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "oracle_reclaimer_standard",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS0009": "abyssal_glare"}
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS0001": "rifttorpedo"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS0010": "voidblaster"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0003": "inimical_emanation",
+                "WS0004": "inimical_emanation",
+                "WS0005": "inimical_emanation",
+                "WS0006": "inimical_emanation",
+                "WS0011": "inimical_emanation",
+                "WS0012": "inimical_emanation"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0007": "rift_lightning",
+                "WS0008": "rift_lightning"
+            }
+        }
+    ]
+}

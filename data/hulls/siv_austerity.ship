@@ -1,0 +1,116 @@
+{
+  "hullName": "Austerity",
+  "hullId": "siv_austerity",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/ships/austerity/siv_austerity.png",
+  "style": "HIGH_TECH",
+  "height": 112,
+  "width": 168,
+  "center": [83, 56],
+  "collisionRadius": 115.5,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 122,
+  "viewOffset": 0,
+  "builtInMods": [
+    "missile_reload",
+    "solvaris_divine_architecture"
+
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "LARGE",
+      "type": "SYNERGY",
+      "mount": "HARDPOINT",
+      "arc": 50,
+      "angle": 0,
+      "locations": [30, 0]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 110,
+      "angle": 0,
+      "locations": [-1, 35]
+    },
+    {
+      "id": "WS0003",
+      "size": "MEDIUM",
+      "type": "HYBRID",
+      "mount": "HARDPOINT",
+      "arc": 30,
+      "angle": 0,
+      "locations": [3, 58]
+    },
+    {
+      "id": "WS0004",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "TURRET",
+      "arc": 110,
+      "angle": 0,
+      "locations": [-10, -58]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "HARDPOINT",
+      "arc": 30,
+      "angle": 0,
+      "locations": [47, -38]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-48, -0],
+      "length": 139,
+      "width": 15,
+      "angle": 180,
+      "contrailSize": 15,
+      "style": "XE_CRYSTAL"
+    },
+    {
+      "location": [-44.5, -10.5],
+      "length": 114.5,
+      "width": 17,
+      "angle": 180,
+      "contrailSize": 17,
+      "style": "XE_CRYSTAL"
+    },
+    {
+      "location": [-44.5, 10.5],
+      "length": 114.5,
+      "width": 17,
+      "angle": -180,
+      "contrailSize": 17,
+      "style": "XE_CRYSTAL"
+    },
+    {
+      "location": [-44.5, -22.5],
+      "length": 85.5,
+      "width": 13,
+      "angle": 180,
+      "contrailSize": 13,
+      "style": "XE_CRYSTAL"
+    },
+    {
+      "location": [-44.5, 22.5],
+      "length": 85.5,
+      "width": 13,
+      "angle": -180,
+      "contrailSize": 13,
+      "style": "XE_CRYSTAL"
+    }
+  ],
+  "bounds": [
+    -43.5, 51.5,
+    -15.5, 64,
+    41, 16,
+    41, -38.5,
+    -4.5, -70,
+    -43.5, -51.5
+  ]
+}

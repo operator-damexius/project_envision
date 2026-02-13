@@ -1,0 +1,31 @@
+{
+    "id":"logic_step",
+    "type":"DISPLACER",
+    "aiType":"PHASE_DISPLACER",
+    
+    "statsScript":"data.scripts.shipsystems.LogicStepStats",
+    
+    "range":600,
+    "randomRange":0,
+    "renderCopyDuringTeleport":false,
+    
+    "fadeActivationSoundOnChargedown":false,
+    "useSound":"system_phase_skimmer",
+    "outOfUsesSound":"gun_out_of_ammo",
+    
+    "jitterColor":[0,255,200,200],
+    "jitterCopies":1,
+    "jitterRange":3,
+    "jitterRangeRadiusFraction":0,
+    
+    "weaponGlowColor":[0,255,200,0],
+    "weaponTypes":[ENERGY],
+    
+    "engineGlowColor":[0,255,200,150],
+
+    "aiHints":{
+        "activeSpeedIncrease":0,
+        "burstMovementPotential":600,
+        "averageSpeedIncrease":50
+    }
+}

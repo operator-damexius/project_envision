@@ -13,7 +13,7 @@ public class MissionDefinition implements MissionDefinitionPlugin {
         // =====================================================================
         // 1. FLEET SETUP
         // =====================================================================
-        api.initFleet(FleetSide.PLAYER, "SRSS", FleetGoal.ATTACK, false, 25);
+        api.initFleet(FleetSide.PLAYER, "SIV", FleetGoal.ATTACK, false, 25);
         api.initFleet(FleetSide.ENEMY, "ISS", FleetGoal.ATTACK, true, 25);
 
         api.setFleetTagline(FleetSide.PLAYER, "Solvaris / Oracle Prototypes");
@@ -29,24 +29,28 @@ public class MissionDefinition implements MissionDefinitionPlugin {
         // Note: setting the last boolean to 'true' makes them selectable as flagship
         
         // --- Capitals & Heavy Cruisers ---
-        api.addToFleet(FleetSide.PLAYER, "srss_forbearance_standard", FleetMemberType.SHIP, "SRSS Forbearance", true);
-        api.addToFleet(FleetSide.PLAYER, "srss_endurance_standard", FleetMemberType.SHIP, "SRSS Endurance", true);
-        api.addToFleet(FleetSide.PLAYER, "srss_perpetuation_standard", FleetMemberType.SHIP, "SRSS Perpetuation", true);
+        api.addToFleet(FleetSide.PLAYER, "siv_forbearance_standard", FleetMemberType.SHIP, "SIV Forbearance", true);
+        api.addToFleet(FleetSide.PLAYER, "siv_tenacity_standard" , FleetMemberType.SHIP, "SIV Tenacity", true);
+   
+
         
         // --- Cruisers ---
-        api.addToFleet(FleetSide.PLAYER, "srss_stamina_standard", FleetMemberType.SHIP, "SRSS Stamina", true);
-        api.addToFleet(FleetSide.PLAYER, "srss_determinant_standard", FleetMemberType.SHIP, "SRSS Determinant", true);
-        api.addToFleet(FleetSide.PLAYER, "srss_determinant_fuel_standard", FleetMemberType.SHIP, "SRSS Determinant Fuel", true);
+        api.addToFleet(FleetSide.PLAYER, "siv_stamina_standard", FleetMemberType.SHIP, "SIV Stamina", true);
+        api.addToFleet(FleetSide.PLAYER, "siv_determinant_standard", FleetMemberType.SHIP, "SIV Determinant", true);
+        api.addToFleet(FleetSide.PLAYER, "siv_determinant_fuel_standard", FleetMemberType.SHIP, "SIV Determinant Fuel", true);
+        api.addToFleet(FleetSide.PLAYER, "siv_endurance_standard", FleetMemberType.SHIP, "SIV Endurance", true);
         
         // --- Destroyers & Frigates ---
-        api.addToFleet(FleetSide.PLAYER, "srss_continuance_standard", FleetMemberType.SHIP, "SRSS Continuance", true);
-        api.addToFleet(FleetSide.PLAYER, "srss_austerity_standard", FleetMemberType.SHIP, "SRSS Austerity", true);
-        api.addToFleet(FleetSide.PLAYER, "srss_buffalo_standard", FleetMemberType.SHIP, "SRSS Buffalo", true);
+        api.addToFleet(FleetSide.PLAYER, "siv_continuance_standard", FleetMemberType.SHIP, "SIV Continuance", true);
+        api.addToFleet(FleetSide.PLAYER, "siv_austerity_standard", FleetMemberType.SHIP, "SIV Austerity", true);
+        api.addToFleet(FleetSide.PLAYER, "siv_perpetuation_standard", FleetMemberType.SHIP, "SIV Perpetuation", true);
         
         // --- Oracle Series ---
         api.addToFleet(FleetSide.PLAYER, "oracle_vortex_F1", FleetMemberType.SHIP, "Oracle Vortex", true);
         api.addToFleet(FleetSide.PLAYER, "oracle_divergence_F1", FleetMemberType.SHIP, "Oracle Divergence", true);
         api.addToFleet(FleetSide.PLAYER, "oracle_defiance_F1", FleetMemberType.SHIP, "Oracle Defiance", true);
+        api.addToFleet(FleetSide.PLAYER, "oracle_kratos_F1", FleetMemberType.SHIP, "Oracle Kratos", true);
+        api.addToFleet(FleetSide.PLAYER, "oracle_reclaimer_standard" , FleetMemberType.SHIP, "SIV Reclaimer", true);
 
         // =====================================================================
         // 3. ENEMY FLEET (The Vanilla Gauntlet)

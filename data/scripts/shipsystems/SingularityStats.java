@@ -12,7 +12,7 @@ import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.impl.combat.BaseShipSystemScript;
 import com.fs.starfarer.api.util.Misc;
 
-// --- GRAPHICSLIB (Distortion Only) ---
+// --- WARNING: GRAPHICSLIB DEPENDENCY ---
 import org.dark.shaders.distortion.DistortionShader;
 import org.dark.shaders.distortion.RippleDistortion;
 
@@ -24,32 +24,36 @@ public class SingularityStats extends BaseShipSystemScript {
     public static final float PULL_STRENGTH = 3000f; 
     public static final float KILL_RADIUS = 450f;    
     
-    public static final float MELT_DPS = 9000f; 
+    // Burst Config
+    public static final float BURST_FORCE = 4000f; 
+    public static final float BURST_DAMAGE = 5000f; 
+    public static final float BURST_EMP = 2000f;
     
-    // --- COLORS (WHITE CLOUD THEME) ---
-    // The "Hole" is now a blinding white core (Dense Energy)
+    public static final float MELT_DPS = 9000f; 
+    public static final float MAX_SPIN_SPEED = 30f; 
+    
+    // --- COLORS ---
     public static final Color VOID_COLOR = new Color(255, 255, 255, 255); 
     public static final Color PHOTON_RING = new Color(220, 240, 255, 150); 
-    
-    // The "Swirl" is now layers of mist and clouds
-    public static final Color RING_INNER = new Color(255, 255, 255, 210); // Dense cloud
-    public static final Color RING_MID = new Color(220, 235, 255, 140);   // Wispy cloud
-    public static final Color RING_OUTER = new Color(200, 220, 240, 50);  // Faint mist
-    
-    // Warning Flash
+    public static final Color RING_INNER = new Color(255, 255, 255, 210);
+    public static final Color RING_MID = new Color(220, 235, 255, 140);   
+    public static final Color RING_OUTER = new Color(200, 220, 240, 50);  
     public static final Color WARNING_COLOR = new Color(200, 255, 255, 220); 
-    
-    // Lightning
+    public static final Color NEBULA_COLOR = new Color(100, 220, 255, 100); 
+    public static final Color NEBULA_CORE = new Color(255, 255, 255, 200);  
     public static final Color ARC_CORE = new Color(255, 255, 255, 255);
     public static final Color ARC_FRINGE = new Color(180, 220, 255, 200);
-    
-    // Damage Effects (Dissolving into light)
     public static final Color MELT_COLOR = new Color(255, 255, 255, 180);
     public static final Color JITTER_COLOR = new Color(200, 255, 255, 100);
 
+    // --- STATE & CACHE ---
     private Vector2f targetLocation = null;
-    private boolean isCharging = false;
-    private float activeTimer = 0f;
+    private boolean hasBurst = false;
+    
+    // Reusable vectors
+    private final Vector2f vTmp = new Vector2f();
+    private final Vector2f vTmp2 = new Vector2f();
+    private final Vector2f vSpawn = new Vector2f();
 
     public void apply(MutableShipStatsAPI stats, String id, State state, float effectLevel) {
         ShipAPI ship = null;
@@ -63,6 +67,8 @@ public class SingularityStats extends BaseShipSystemScript {
 
         // 1. CHARGE UP
         if (state == State.IN) {
+            hasBurst = false;
+            
             if (targetLocation == null) {
                 if (ship == engine.getPlayerShip()) {
                     targetLocation = new Vector2f(ship.getMouseTarget());
@@ -70,136 +76,172 @@ public class SingularityStats extends BaseShipSystemScript {
                     if (ship.getShipTarget() != null) {
                         targetLocation = new Vector2f(ship.getShipTarget().getLocation());
                     } else {
-                        targetLocation = Misc.getUnitVectorAtDegreeAngle(ship.getFacing());
-                        targetLocation.scale(1500f);
-                        Vector2f.add(ship.getLocation(), targetLocation, targetLocation);
+                        targetLocation = new Vector2f();
+                        Vector2f dir = Misc.getUnitVectorAtDegreeAngle(ship.getFacing());
+                        dir.scale(1500f);
+                        Vector2f.add(ship.getLocation(), dir, targetLocation);
                     }
                 }
             }
             
-            // Visual Guide: Divine Lightning
+            // Charge Visuals
             if (Math.random() > 0.6) {
-                engine.spawnEmpArcVisual(
-                    ship.getLocation(), ship, targetLocation, null,
-                    25f, ARC_CORE, ARC_FRINGE
-                );
+                engine.spawnEmpArcVisual(ship.getLocation(), ship, targetLocation, null, 25f, ARC_CORE, ARC_FRINGE);
             }
-
-            // Visual Warning: Gathering Clouds
             if (Math.random() > 0.5) {
-                Vector2f spawnPoint = MathUtils_getRandomPointInCircle(targetLocation, 900f * effectLevel);
-                Vector2f vel = Vector2f.sub(targetLocation, spawnPoint, null);
-                vel.scale(4.0f); 
-                // Larger particles for cloud effect
-                engine.addHitParticle(spawnPoint, vel, 25f, 2f, 0.5f, WARNING_COLOR);
+                setRandomPointInCircle(targetLocation, 900f * effectLevel, vSpawn);
+                Vector2f.sub(targetLocation, vSpawn, vTmp); 
+                vTmp.scale(4.0f); 
+                engine.addHitParticle(vSpawn, vTmp, 25f, 2f, 0.5f, WARNING_COLOR);
             }
-            
             Global.getSoundPlayer().playLoop("system_entropy_loop", ship, 1.0f + effectLevel, 0.6f, targetLocation, new Vector2f(0,0));
-            
-            isCharging = true;
-            activeTimer = 0f;
         }
 
         // 2. SINGULARITY ACTIVE
-        if (state == State.ACTIVE || state == State.OUT) {
-            isCharging = false;
-            if (state == State.ACTIVE) activeTimer += engine.getElapsedInLastFrame();
-            
-            float scale = (state == State.OUT) ? effectLevel : 1.0f;
-            if (scale <= 0.01f) return; 
+        if (state == State.ACTIVE) {
             if (targetLocation == null) return; 
-
-            // --- A. VISUALS (THE WHITE STORM) ---
             
-            // 1. The Cloud Swirl
-            spawnRingParticles(engine, targetLocation, 450f * scale, 15, 500f, 200f, RING_INNER, 60f);
-            spawnRingParticles(engine, targetLocation, 750f * scale, 10, 300f, 100f, RING_MID, 80f);
-            spawnRingParticles(engine, targetLocation, 1200f * scale, 5, 150f, 50f, RING_OUTER, 120f);
+            // --- VISUALS ---
+            spawnRingParticles(engine, targetLocation, 450f, 15, 500f, 200f, RING_INNER, 60f);
+            spawnRingParticles(engine, targetLocation, 750f, 10, 300f, 100f, RING_MID, 80f);
+            spawnRingParticles(engine, targetLocation, 1200f, 5, 150f, 50f, RING_OUTER, 120f);
+            engine.addSmoothParticle(targetLocation, new Vector2f(0,0), 450f, 1f, 0.1f, PHOTON_RING);
+            engine.addSmoothParticle(targetLocation, new Vector2f(0,0), 380f, 1f, 0.1f, VOID_COLOR);
 
-            // 2. The Core (Blinding Star)
-            // Photon Ring (Glow behind)
-            engine.addSmoothParticle(targetLocation, new Vector2f(0,0), 450f * scale, 1f, 0.1f, PHOTON_RING);
-            // Dense Core (White Sphere on top)
-            engine.addSmoothParticle(targetLocation, new Vector2f(0,0), 380f * scale, 1f, 0.1f, VOID_COLOR);
-            engine.addSmoothParticle(targetLocation, new Vector2f(0,0), 350f * scale, 1f, 0.1f, VOID_COLOR);
+            // --- PHYSICS (PULL) ---
+            applySingularityPhysics(engine, ship, engine.getElapsedInLastFrame());
+        }
 
-            // --- B. DISTORTION (Heat Haze) ---
-            if (Global.getSettings().getModManager().isModEnabled("shaderLib")) {
-                RippleDistortion gravityWell = new RippleDistortion(targetLocation, new Vector2f(0,0));
-                gravityWell.setSize(1800f * scale); 
-                gravityWell.setIntensity(400f * scale); 
-                gravityWell.setFrameRate(0f); 
-                gravityWell.setLifetime(0.15f); 
-                DistortionShader.addDistortion(gravityWell);
+        // 3. BURST PHASE (State OUT)
+        if (state == State.OUT) {
+            if (!hasBurst) {
+                triggerNebulaBurst(engine, ship);
+                hasBurst = true;
             }
+        }
+    }
 
-            // --- C. PHYSICS ---
-            if (state == State.ACTIVE) {
-                List<ShipAPI> targets = engine.getShips();
-                for (ShipAPI target : targets) {
-                    if (target == ship) continue; 
-                    if (target.getOwner() == ship.getOwner()) continue;
-                    if (target.isPhased()) continue; 
-                    
-                    float dist = Misc.getDistance(targetLocation, target.getLocation());
-                    
-                    if (dist < PULL_RANGE) {
-                        Vector2f pullDir = Vector2f.sub(targetLocation, target.getLocation(), null);
-                        pullDir.normalise();
-                        
-                        float strength = PULL_STRENGTH * (1f - (dist / PULL_RANGE));
-                        strength *= strength; 
-                        strength += 200f; 
-                        
-                        Vector2f tangent = new Vector2f(-pullDir.y, pullDir.x);
-                        tangent.scale(strength * 0.5f); 
-                        
-                        Vector2f force = new Vector2f(pullDir);
-                        force.scale(strength);
-                        
-                        Vector2f totalForce = Vector2f.add(force, tangent, null);
-                        totalForce.scale(engine.getElapsedInLastFrame());
-                        Vector2f.add(target.getVelocity(), totalForce, target.getVelocity());
-                        
-                        float angleToHole = Misc.getAngleInDegrees(target.getLocation(), targetLocation);
-                        target.setFacing(Misc.normalizeAngle(angleToHole));
-                        
-                        // --- D. THE DISSOLUTION ZONE ---
-                        if (dist < KILL_RADIUS) {
-                            
-                            // 1. ALIVE: BURNING IN LIGHT
-                            if (!target.isHulk()) {
-                                engine.applyDamage(
-                                    target, target.getLocation(), 
-                                    MELT_DPS * engine.getElapsedInLastFrame(),
-                                    DamageType.ENERGY, 
-                                    0f, true, false, ship
-                                );
-                                
-                                target.setJitter(id, JITTER_COLOR, 1.0f, 3, 5f + (float)Math.random() * 5f);
-                                if (Math.random() > 0.5) {
-                                    Vector2f rndLoc = MathUtils_getRandomPointInCircle(target.getLocation(), target.getCollisionRadius());
-                                    engine.addHitParticle(rndLoc, target.getVelocity(), 15f, 1f, 0.5f, MELT_COLOR);
-                                }
-                            }
-                            
-                            // 2. DEAD: FADING INTO WHITE
-                            else {
-                                float currentAlpha = target.getExtraAlphaMult();
-                                target.setExtraAlphaMult(currentAlpha * 0.995f); 
-                                
-                                if (Math.random() > 0.5) {
-                                    Vector2f debrisLoc = MathUtils_getRandomPointInCircle(target.getLocation(), target.getCollisionRadius());
-                                    Vector2f debrisVel = Vector2f.sub(targetLocation, debrisLoc, null);
-                                    debrisVel.scale(2.0f); 
-                                    engine.addHitParticle(debrisLoc, debrisVel, 10f, 0.5f, 0.4f, Color.white);
-                                }
+    // --- THE BIG BANG LOGIC ---
+    private void triggerNebulaBurst(CombatEngineAPI engine, ShipAPI source) {
+        if (targetLocation == null) return;
 
-                                if (currentAlpha < 0.1f) {
-                                    engine.removeEntity(target);
-                                    engine.spawnExplosion(targetLocation, new Vector2f(0,0), VOID_COLOR, 150f, 1.0f);
-                                }
-                            }
+        // 1. SOUND
+        Global.getSoundPlayer().playSound("system_entropy_off", 1f, 0.7f, targetLocation, new Vector2f(0,0));
+        Global.getSoundPlayer().playSound("mine_explosion", 1f, 0.8f, targetLocation, new Vector2f(0,0));
+
+        // 2. VISUALS: NEBULA CLOUD
+        engine.spawnExplosion(targetLocation, new Vector2f(0,0), VOID_COLOR, 2000f, 3f); 
+        
+        for (int i = 0; i < 40; i++) {
+            setRandomPointInCircle(targetLocation, 300f, vSpawn);
+            Vector2f.sub(vSpawn, targetLocation, vTmp); 
+            vTmp.normalise();
+            float speed = 200f + (float)Math.random() * 600f;
+            vTmp.scale(speed);
+            
+            float size = 200f + (float)Math.random() * 300f;
+            Color cloudColor = (Math.random() > 0.5f) ? NEBULA_COLOR : NEBULA_CORE;
+            
+            engine.addSmokeParticle(vSpawn, vTmp, size, 0.2f, 4f, cloudColor);
+        }
+
+        // 3. SHOCKWAVE DISTORTION
+        if (Global.getSettings().getModManager().isModEnabled("shaderLib")) {
+            RippleDistortion wave = new RippleDistortion(targetLocation, new Vector2f(0,0));
+            wave.setSize(3000f);
+            wave.setIntensity(1000f);
+            wave.setFrameRate(60f);
+            wave.setLifetime(0.5f);
+            DistortionShader.addDistortion(wave);
+        }
+
+        // 4. PHYSICS: REPULSION SHOCKWAVE
+        List<ShipAPI> targets = engine.getShips();
+        for (ShipAPI target : targets) {
+            if (target == source) continue;
+            if (target.isPhased()) continue;
+
+            float dist = Misc.getDistance(targetLocation, target.getLocation());
+            if (dist < PULL_RANGE) {
+                
+                // Damage Falloff
+                float power = 1f - (dist / PULL_RANGE);
+                if (dist < KILL_RADIUS * 2f) power = 1f; 
+
+                // Apply Damage
+                if (target.getOwner() != source.getOwner()) {
+                    engine.applyDamage(target, target.getLocation(), BURST_DAMAGE * power, DamageType.HIGH_EXPLOSIVE, BURST_EMP * power, true, false, source);
+                }
+
+                // Apply KNOCKBACK
+                Vector2f.sub(target.getLocation(), targetLocation, vTmp);
+                vTmp.normalise();
+                vTmp.scale(BURST_FORCE * power);
+                
+                // Mass Dampener
+                float massDampen = 1000f / (target.getMass() + 100f);
+                if (massDampen > 1f) massDampen = 1f;
+                vTmp.scale(massDampen);
+
+                Vector2f.add(target.getVelocity(), vTmp, target.getVelocity());
+                
+                if (dist < 1000f) {
+                    target.getEngineController().forceFlameout(true);
+                }
+            }
+        }
+    }
+
+    // --- PHYSICS (PULL) ---
+    private void applySingularityPhysics(CombatEngineAPI engine, ShipAPI ship, float amount) {
+        List<ShipAPI> targets = engine.getShips();
+        
+        for (ShipAPI target : targets) {
+            if (target == ship) continue; 
+            if (target.getOwner() == ship.getOwner()) continue;
+            if (target.isPhased()) continue; 
+            
+            float dist = Misc.getDistance(targetLocation, target.getLocation());
+            
+            if (dist < PULL_RANGE) {
+                Vector2f.sub(targetLocation, target.getLocation(), vTmp);
+                vTmp.normalise();
+                
+                float strength = PULL_STRENGTH * (1f - (dist / PULL_RANGE));
+                strength *= strength; 
+                strength += 200f; 
+                
+                vTmp2.set(-vTmp.y, vTmp.x);
+                vTmp2.scale(strength * 0.5f); 
+                
+                vTmp.scale(strength);
+                Vector2f.add(vTmp, vTmp2, vTmp);
+                vTmp.scale(amount);
+                
+                Vector2f.add(target.getVelocity(), vTmp, target.getVelocity());
+                
+                // Spin Dampener
+                float spin = target.getAngularVelocity();
+                if (spin > MAX_SPIN_SPEED) target.setAngularVelocity(MAX_SPIN_SPEED);
+                else if (spin < -MAX_SPIN_SPEED) target.setAngularVelocity(-MAX_SPIN_SPEED);
+                
+                // Melt Logic
+                if (dist < KILL_RADIUS) {
+                    if (!target.isHulk()) {
+                        engine.applyDamage(target, target.getLocation(), MELT_DPS * amount, DamageType.ENERGY, 0f, true, false, ship);
+                        target.setJitter("singularity_melt", JITTER_COLOR, 1.0f, 3, 5f);
+                    } else {
+                         if (Math.random() > 0.5) {
+                            setRandomPointInCircle(target.getLocation(), target.getCollisionRadius(), vSpawn);
+                            Vector2f.sub(targetLocation, vSpawn, vTmp); 
+                            vTmp.scale(2.0f); 
+                            engine.addHitParticle(vSpawn, vTmp, 10f, 0.5f, 0.4f, Color.white);
+                        }
+                        float currentAlpha = target.getExtraAlphaMult();
+                        target.setExtraAlphaMult(currentAlpha * 0.995f);
+                        if (currentAlpha < 0.1f) {
+                            engine.removeEntity(target);
+                            engine.spawnExplosion(targetLocation, new Vector2f(0,0), VOID_COLOR, 150f, 1.0f);
                         }
                     }
                 }
@@ -207,48 +249,47 @@ public class SingularityStats extends BaseShipSystemScript {
         }
     }
 
+    // --- HELPERS ---
     private void spawnRingParticles(CombatEngineAPI engine, Vector2f center, float radius, int count, float orbitSpeed, float suckSpeed, Color color, float sizeBase) {
         for (int i = 0; i < count; i++) {
             float r = radius + (float)Math.random() * 80f; 
             float theta = (float)Math.random() * 360f;
-            Vector2f spawnLoc = MathUtils_getPointOnCircumference(center, r, theta);
-            Vector2f orbitVel = MathUtils_getPointOnCircumference(new Vector2f(0,0), orbitSpeed, theta + 90f);
-            Vector2f suckVel = Vector2f.sub(center, spawnLoc, null);
-            suckVel.normalise();
-            suckVel.scale(suckSpeed);
-            Vector2f finalVel = Vector2f.add(orbitVel, suckVel, null);
+            float angleRad = (float)Math.toRadians(theta);
+            
+            vSpawn.set(center.x + (float)Math.cos(angleRad) * r, center.y + (float)Math.sin(angleRad) * r);
+            
+            float orbitX = -(float)Math.sin(angleRad) * orbitSpeed;
+            float orbitY = (float)Math.cos(angleRad) * orbitSpeed;
+            
+            Vector2f.sub(center, vSpawn, vTmp);
+            vTmp.normalise();
+            vTmp.scale(suckSpeed);
+            vTmp.x += orbitX;
+            vTmp.y += orbitY;
             
             float pSize = sizeBase + (float)Math.random() * 30f;
-            float dur = 0.4f + (float)Math.random() * 0.4f; 
-            engine.addHitParticle(spawnLoc, finalVel, pSize, 0.6f, dur, color);
+            engine.addHitParticle(vSpawn, vTmp, pSize, 0.6f, 0.4f + (float)Math.random()*0.4f, color);
         }
     }
 
-    private Vector2f MathUtils_getRandomPointInCircle(Vector2f center, float radius) {
+    private void setRandomPointInCircle(Vector2f center, float radius, Vector2f dest) {
         float r = radius * (float)Math.sqrt(Math.random());
         float theta = (float)Math.random() * 360f;
-        Vector2f point = new Vector2f((float)Math.cos(Math.toRadians(theta)), (float)Math.sin(Math.toRadians(theta)));
-        point.scale(r);
-        Vector2f.add(center, point, point);
-        return point;
-    }
-    
-    private Vector2f MathUtils_getPointOnCircumference(Vector2f center, float radius, float angle) {
-        Vector2f point = new Vector2f((float)Math.cos(Math.toRadians(angle)), (float)Math.sin(Math.toRadians(angle)));
-        point.scale(radius);
-        Vector2f.add(center, point, point);
-        return point;
+        float angleRad = (float)Math.toRadians(theta);
+        dest.set(center.x + (float)Math.cos(angleRad) * r, center.y + (float)Math.sin(angleRad) * r);
     }
 
     public void unapply(MutableShipStatsAPI stats, String id) {
         targetLocation = null;
-        isCharging = false;
-        activeTimer = 0f;
     }
 
+    // --- FIX HERE: Check index == 0 ---
     public StatusData getStatusData(int index, State state, float effectLevel) {
-        if (state == State.IN) return new StatusData("CONJURING STORM", true);
-        if (state == State.ACTIVE) return new StatusData("SINGULARITY ACTIVE", true);
+        if (index == 0) {
+            if (state == State.IN) return new StatusData("CONJURING STORM", true);
+            if (state == State.ACTIVE) return new StatusData("SINGULARITY ACTIVE", true);
+            if (state == State.OUT) return new StatusData("CRITICAL COLLAPSE", true);
+        }
         return null;
     }
 }

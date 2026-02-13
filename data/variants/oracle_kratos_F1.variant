@@ -1,0 +1,34 @@
+{
+    "displayName": "Standard",
+    "fluxCapacitors": 8,
+    "fluxVents": 0,
+    "goalVariant": true,
+    "hullId": "oracle_kratos",
+    "hullMods": [
+        "fluxbreakers",
+        "efficiency_overhaul",
+        "insulatedengine",
+        "autorepair"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "oracle_kratos_F1",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0001": "cryoblaster",
+                "WS0002": "cryoblaster"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0003": "riftbeam",
+                "WS0004": "riftbeam"
+            }
+        }
+    ]
+}

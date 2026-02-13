@@ -68,34 +68,34 @@
         ["oracle_divergence_F1"], 
         ["oracle_vortex_F1"], 
         ["oracle_defiance_F1"],
-        ["srss_perpetuation_standard"]
+        ["siv_perpetuation_standard"]
     ],
 
     # Destroyer Starts
     "startShipsCombatSmall":[
-        ["srss_stamina_standard", "srss_perpetuation_standard"],
-        ["srss_austerity_standard", "srss_perpetuation_standard"]
+        ["siv_stamina_standard", "siv_perpetuation_standard"],
+        ["siv_austerity_standard", "siv_perpetuation_standard"]
     ],
 
     # Trade/Logistics Starts (Using the Fuel Capital as a heavy tanker option)
     "startShipsTradeLarge":[
-        ["srss_determinant_fuel_standard", "srss_determinant_standard"]
+        ["siv_determinant_fuel_standard", "siv_determinant_standard"]
     ],
 
     # Cruiser Starts
     "startShipsCombatLarge":[
-        ["srss_endurance_standard", "srss_stamina_standard", "srss_perpetuation_standard"],
-        ["srss_continuance_standard", "srss_austerity_standard", "srss_perpetuation_standard"]
+        ["siv_endurance_standard", "siv_stamina_standard", "siv_perpetuation_standard"],
+        ["siv_continuance_standard", "siv_austerity_standard", "siv_perpetuation_standard"]
     ],
 
     # Carrier Starts (Using Continuance as it has launch bays)
     "startShipsCarrierLarge":[
-        ["srss_continuance_standard", "srss_stamina_standard", "srss_perpetuation_standard"]
+        ["siv_continuance_standard", "siv_stamina_standard", "siv_perpetuation_standard"]
     ],
 
     # Capital/Super Ship Starts
     "startShipsSuper":[
-        ["srss_forbearance_standard"]
+        ["siv_forbearance_standard"]
     ],
 
     "startSpecialItems":[

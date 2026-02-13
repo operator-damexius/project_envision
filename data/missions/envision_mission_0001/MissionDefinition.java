@@ -1,6 +1,5 @@
 package data.missions.envision_mission_0001;
 
-import java.awt.Color;
 import com.fs.starfarer.api.fleet.FleetGoal;
 import com.fs.starfarer.api.fleet.FleetMemberType;
 import com.fs.starfarer.api.mission.FleetSide;

@@ -25,44 +25,29 @@ public class Pyralis implements SectorGeneratorPlugin {
     @Override
     public void generate(SectorAPI sector) {
         try {
-            // =================================================================
-            // --- STAR SYSTEM ---
-            // =================================================================
             StarSystemAPI system = sector.createStarSystem("Pyralis");
-            system.getLocation().set(32000, -10000);
-            system.setBackgroundTextureFilename("graphics/backgrounds/background3.jpg");
+            system.setBackgroundTextureFilename("graphics/backgrounds/background02.jpg");
 
-            // =================================================================
-            // --- STAR ---
-            // =================================================================
             PlanetAPI pyralis_star = system.initStar("pyralis", "star_orange", 1100f, 600f);
-            system.setCenter(pyralis_star); // Stability Fix
+            system.setCenter(pyralis_star);
 
-            // =================================================================
-            // --- RINGS & BELTS ---
-            // =================================================================
-            // Zone 1: The Furnace
             system.addRingBand(pyralis_star, "misc", "rings_dust0", 256f, 0, new Color(255, 100, 20), 256f, 1600f, 40f, Terrain.RING, "Furnace Wall");
             system.addRingBand(pyralis_star, "misc", "rings_dust0", 256f, 1, new Color(255, 140, 40), 256f, 2000f, 50f, Terrain.RING, "Molten Track");
             system.addRingBand(pyralis_star, "misc", "rings_dust0", 256f, 0, new Color(230, 100, 60), 256f, 2400f, 60f, Terrain.RING, "Ember Band");
             system.addRingBand(pyralis_star, "misc", "rings_dust0", 256f, 2, new Color(200, 80, 40), 256f, 2800f, 70f, Terrain.RING, "Scorched Inner");
             
-            // Zone 2: The Grinder
-            system.addAsteroidBelt(pyralis_star, 150, 3800f, 800f, 200, 300, Terrain.ASTEROID_BELT, "The Grinder");
+            system.addAsteroidBelt(pyralis_star, 150, 3800f, 150f, 200, 220, Terrain.ASTEROID_BELT, "The Grinder");
             system.addRingBand(pyralis_star, "misc", "rings_dust0", 256f, 3, new Color(180, 160, 150), 256f, 3800f, 100f, Terrain.RING, "Grinder Dust");
 
-            // Zone 3: The Smog
             system.addRingBand(pyralis_star, "misc", "rings_dust0", 256f, 1, new Color(160, 120, 100), 256f, 4500f, 90f, Terrain.RING, "Rust Belt");
             system.addRingBand(pyralis_star, "misc", "rings_dust0", 256f, 0, new Color(140, 110, 90), 256f, 5000f, 100f, Terrain.RING, "Heavy Smog");
             system.addRingBand(pyralis_star, "misc", "rings_dust0", 256f, 2, new Color(120, 100, 80), 256f, 5500f, 110f, Terrain.RING, "Slag Stream");
             system.addRingBand(pyralis_star, "misc", "rings_dust0", 256f, 3, new Color(100, 90, 80), 256f, 6000f, 120f, Terrain.RING, "Iron Haze");
             system.addRingBand(pyralis_star, "misc", "rings_dust0", 256f, 1, new Color(90, 80, 70), 256f, 6600f, 130f, Terrain.RING, "Carbon Cloud");
 
-            // Zone 4: The Deadlands
-            system.addAsteroidBelt(pyralis_star, 150, 7800f, 500f, 300, 256f, Terrain.ASTEROID_BELT, "The Deadlands");
+            system.addAsteroidBelt(pyralis_star, 150, 7800f, 150f, 300, 330, Terrain.ASTEROID_BELT, "The Deadlands");
             system.addRingBand(pyralis_star, "misc", "rings_dust0", 256f, 0, new Color(150, 150, 150), 256f, 7800f, 140f, Terrain.RING, "Deadlands Debris");
 
-            // Zone 5: The Ash
             system.addRingBand(pyralis_star, "misc", "rings_dust0", 256f, 2, new Color(110, 110, 120), 256f, 8800f, 160f, Terrain.RING, "Titanis Wake");
             system.addRingBand(pyralis_star, "misc", "rings_dust0", 256f, 3, new Color(90, 90, 100), 256f, 9600f, 180f, Terrain.RING, "Outer Ash");
             system.addRingBand(pyralis_star, "misc", "rings_dust0", 256f, 1, new Color(70, 70, 80), 256f, 16000f, 220f, Terrain.RING, "Rim Soot");
@@ -70,25 +55,15 @@ public class Pyralis implements SectorGeneratorPlugin {
             system.addRingBand(pyralis_star, "misc", "rings_dust0", 256f, 1, new Color(70, 70, 80), 256f, 16400f, 220f, Terrain.RING, "Rim Soot");
             system.addRingBand(pyralis_star, "misc", "rings_dust0", 256f, 0, new Color(50, 50, 60), 256f, 16600f, 260f, Terrain.RING, "Void Edge");
 
-            // =================================================================
-            // --- PLANET : TITANIS (The Ember Giant) ---
-            // =================================================================
             PlanetAPI planet0 = system.addPlanet("titanis", pyralis_star, "Titanis", "gas_giant", 0, 600f, 13000f, 4000f);
-            
-            // Visuals: Warm, burning orange to match the "Pyralis" (Fire) theme
             planet0.getSpec().setPlanetColor(new Color(255, 140, 50, 255));
             planet0.getSpec().setAtmosphereColor(new Color(255, 160, 80, 150));
             planet0.getSpec().setCloudColor(new Color(255, 100, 50, 200));
             planet0.getSpec().setAtmosphereThickness(0.5f);
-            
-            // Aurorae: Red/Orange glow (High energy particle interaction)
             planet0.getSpec().setGlowTexture(Global.getSettings().getSpriteName("hab_glows", "aurorae"));
             planet0.getSpec().setGlowColor(new Color(255, 60, 0, 60));
             planet0.getSpec().setUseReverseLightForGlow(true);
-            
             planet0.applySpecChanges();
-            
-            // CRITICAL ADDITION:
             planet0.setCustomDescriptionId("planet_titanis");
             
             SectorEntityToken magField = system.addTerrain(Terrain.MAGNETIC_FIELD, 
@@ -113,47 +88,57 @@ public class Pyralis implements SectorGeneratorPlugin {
             planet0.getMarket().addCondition(Conditions.VOLATILES_PLENTIFUL);
             planet0.getMarket().addCondition(Conditions.IRRADIATED);  
 
-            // =================================================================
-            // --- IGNIS (The Scabbed Moon) ---
-            // =================================================================
-            // Changed type from "lava" to "barren" to give it a solid rock surface
             PlanetAPI planet0a = system.addPlanet("ignis", planet0, "Ignis", "barren", 0, 150f, 1700f, 30f);
-            
-            // Surface Color: Dark Ash/Basalt (Dark Grey-Red)
-            // This makes it look like cooled, hardened volcanic rock.
-            planet0a.getSpec().setPlanetColor(new Color(60, 50, 45, 255));
-            
-            // Texture: "Banded" works well to simulate stress fractures/cracks
+            planet0a.getSpec().setPlanetColor(new Color(60, 55, 65, 255));
             planet0a.getSpec().setGlowTexture(Global.getSettings().getSpriteName("hab_glows", "banded"));
-            
-            // Glow Color: Deep Magma Red (Not bright orange, but deep heat from within)
-            planet0a.getSpec().setGlowColor(new Color(200, 40, 0, 120));
-            
-            // Use reverse light so the glow shows up on the "night" side (magma cooling)
+            planet0a.getSpec().setGlowColor(new Color(255, 160, 40, 120));
             planet0a.getSpec().setUseReverseLightForGlow(true);
-            
             planet0a.applySpecChanges();
-            
-            // Add Description ID
             planet0a.setCustomDescriptionId("planet_ignis");
 
             Misc.initConditionMarket(planet0a);
             planet0a.getMarket().setSurveyLevel(MarketAPI.SurveyLevel.FULL);
-            planet0a.getMarket().addCondition(Conditions.VERY_HOT);           
-            planet0a.getMarket().addCondition(Conditions.TECTONIC_ACTIVITY);  
             planet0a.getMarket().addCondition(Conditions.NO_ATMOSPHERE);      
-            planet0a.getMarket().addCondition(Conditions.RARE_ORE_RICH);      
-            planet0a.getMarket().addCondition(Conditions.ORE_RICH);           
+            planet0a.getMarket().addCondition(Conditions.VOLATILES_TRACE); 
+            planet0a.getMarket().addCondition(Conditions.ORE_RICH);        
+            planet0a.getMarket().addCondition(Conditions.RARE_ORE_RICH);   
+            planet0a.getMarket().addCondition(Conditions.TECTONIC_ACTIVITY);
+            
+            PlanetAPI planet1 = system.addPlanet("aridus", pyralis_star, "Aridus", "desert", 120, 220f, 18000f, 1800f);
+            planet1.setCustomDescriptionId("planet_aridus");
+            planet1.getSpec().setPlanetColor(new Color(180, 170, 160, 255));
+            planet1.getSpec().setAtmosphereColor(new Color(200, 200, 210, 140));
+            planet1.getSpec().setAtmosphereThickness(0.5f); 
+            planet1.getSpec().setCloudColor(new Color(255, 255, 255, 100));
+            planet1.getSpec().setTilt(15f);
+            planet1.applySpecChanges();
 
-            // =================================================================
-            // --- JUMP POINTS & STABLE LOCATIONS ---
-            // =================================================================
+            Misc.initConditionMarket(planet1);
+            planet1.getMarket().setSurveyLevel(MarketAPI.SurveyLevel.FULL);
+            planet1.getMarket().addCondition(Conditions.LOW_GRAVITY);
+            planet1.getMarket().addCondition(Conditions.FARMLAND_BOUNTIFUL);
+            planet1.getMarket().addCondition(Conditions.ORE_ABUNDANT);
+
+            PlanetAPI planet1a = system.addPlanet("caloris", planet1, "Caloris", "barren", 0, 80f, 750f, 25f);
+            planet1a.setCustomDescriptionId("planet_caloris");
+            planet1a.getSpec().setPlanetColor(new Color(140, 130, 120, 255));
+            planet1a.getSpec().setGlowTexture(Global.getSettings().getSpriteName("hab_glows", "banded"));
+            planet1a.getSpec().setGlowColor(new Color(255, 200, 150, 40)); 
+            planet1a.getSpec().setUseReverseLightForGlow(true);
+            planet1a.getSpec().setAtmosphereThickness(0f);
+            planet1a.applySpecChanges();
+            
+            Misc.initConditionMarket(planet1a);
+            planet1a.getMarket().setSurveyLevel(MarketAPI.SurveyLevel.FULL);
+            planet1a.getMarket().addCondition(Conditions.NO_ATMOSPHERE);
+            planet1a.getMarket().addCondition(Conditions.ORE_RICH);
+            planet1a.getMarket().addCondition(Conditions.RARE_ORE_RICH);
+
             JumpPointAPI jumpPoint = Global.getFactory().createJumpPoint("pyralis_jump_point", "Point Pyralis Jump");
             jumpPoint.setCircularOrbit(pyralis_star, 220, 10000f, 600f);
             jumpPoint.setStandardWormholeToHyperspaceVisual();
             system.addEntity(jumpPoint);
 
-            // STABLE LOCATIONS (Correctly Tokenized)
             SectorEntityToken pyralisStable1 = system.addCustomEntity(null, null, Entities.STABLE_LOCATION, Factions.NEUTRAL);
             pyralisStable1.setCircularOrbit(pyralis_star, 90, 3100f, 200f); 
                   
@@ -170,8 +155,6 @@ public class Pyralis implements SectorGeneratorPlugin {
             pyralisStable5.setCircularOrbit(pyralis_star, 45, 13000f, 600f);
 
             system.autogenerateHyperspaceJumpPoints(true, false);
-            
-            // CLEANUP OPTIMIZED for 13k size system
             cleanup(system);
 
         } catch (Exception e) {
@@ -185,7 +168,6 @@ public class Pyralis implements SectorGeneratorPlugin {
             NebulaEditor editor = new NebulaEditor(plugin);
             float x = system.getLocation().x;
             float y = system.getLocation().y;
-            // Clears arc up to 1400 to cover the 1300 stable location
             editor.clearArc(x, y, 0, 1400f, 0, 360f, 0.25f);
             editor.clearArc(x, y, 0, 1200f, 0, 360f, 0.0f);
         } catch (Exception e) {}

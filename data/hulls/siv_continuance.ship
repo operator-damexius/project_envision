@@ -1,0 +1,153 @@
+{
+  "hullName": "Continuance",
+  "hullId": "siv_continuance",
+  "hullSize": "CRUISER",
+  "spriteName": "graphics/ships/continuance/siv_continuance.png",
+  "style": "HIGH_TECH",
+  "height": 156,
+  "width": 224,
+  "center": [112, 78],
+  "collisionRadius": 130.5,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 146,
+  "viewOffset": 0,
+  "builtInMods": [
+    "missile_reload",
+    "solvaris_divine_architecture"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "LARGE",
+      "type": "HYBRID",
+      "mount": "HARDPOINT",
+      "arc": 50,
+      "angle": 0,
+      "locations": [60.5, -32]
+    },
+    {
+      "id": "WS0002",
+      "size": "LARGE",
+      "type": "HYBRID",
+      "mount": "HARDPOINT",
+      "arc": 50,
+      "angle": -0,
+      "locations": [60.5, 32]
+    },
+    {
+      "id": "WS0003",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "TURRET",
+      "arc": 90,
+      "angle": 0,
+      "locations": [26, -56]
+    },
+    {
+      "id": "WS0004",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "TURRET",
+      "arc": 90,
+      "angle": -0,
+      "locations": [26, 56]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "HARDPOINT",
+      "arc": 240,
+      "angle": -90,
+      "locations": [6, -85]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "HARDPOINT",
+      "arc": 240,
+      "angle": 90,
+      "locations": [6, 85]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "HARDPOINT",
+      "arc": 240,
+      "angle": 180,
+      "locations": [-46, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-72.5, 4.5],
+      "length": 105,
+      "width": 11,
+      "angle": 180,
+      "contrailSize": 11,
+      "style": "XE_CRYSTAL"
+    },
+    {
+      "location": [-72.5, -4.5],
+      "length": 105,
+      "width": 11,
+      "angle": -180,
+      "contrailSize": 11,
+      "style": "XE_CRYSTAL"
+    },
+    {
+      "location": [-73.5, -14],
+      "length": 67,
+      "width": 6,
+      "angle": -180,
+      "contrailSize": 6,
+      "style": "XE_CRYSTAL"
+    },
+    {
+      "location": [-73.5, 14],
+      "length": 67,
+      "width": 6,
+      "angle": 180,
+      "contrailSize": 6,
+      "style": "XE_CRYSTAL"
+    },
+    {
+      "location": [-73.5, -19],
+      "length": 48,
+      "width": 6,
+      "angle": -180,
+      "contrailSize": 6,
+      "style": "XE_CRYSTAL"
+    },
+    {
+      "location": [-73.5, 19],
+      "length": 48,
+      "width": 6,
+      "angle": 180,
+      "contrailSize": 6,
+      "style": "XE_CRYSTAL"
+    }
+  ],
+  "bounds": [
+    -72.5, 26.5,
+    -39.5, 27.5,
+    -19, 47.5,
+    0, 61,
+    -19.5, 98.5,
+    -10, 108,
+    63.5, 55,
+    68.5, 14.5,
+    77.5, 3.5,
+    77.5, -3.5,
+    68.5, -14.5,
+    63.5, -55,
+    -10, -108,
+    -19.5, -98.5,
+    0, -61,
+    -19, -47.5,
+    -39.5, -27.5,
+    -72.5, -26.5
+  ]
+}

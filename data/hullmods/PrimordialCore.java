@@ -1,7 +1,6 @@
 package data.hullmods;
 
 import java.util.List;
-import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.combat.BaseHullMod;
 import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
@@ -59,9 +58,8 @@ public class PrimordialCore extends BaseHullMod {
         stats.getSensorStrength().modifyPercent(id, 60f);
         stats.getSightRadiusMod().modifyPercent(id, 40f);
 
-        // 2. BIOLOGICAL AUTOMATION
-        stats.getMinCrewMod().modifyMult(id, 0f);
-        stats.getMaxCrewMod().modifyMult(id, 0f);
+        // 2. BIOLOGICAL AUTOMATION (Modified: Crew requirements restored to normal)
+        // Removed the lines that set crew to 0. Kept the repair buffs.
         stats.getCombatWeaponRepairTimeMult().modifyMult(id, 0.1f); 
         stats.getCombatEngineRepairTimeMult().modifyMult(id, 0.1f);
 

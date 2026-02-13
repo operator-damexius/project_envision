@@ -1,0 +1,21 @@
+# Starsector specific
+*.log
+saves/
+screenshots/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Compiled Java
+*.class
+*.jar
+
+# IDE specific (VS Code, IntelliJ, Eclipse)
+.vscode/
+.idea/
+*.iml
+.settings/
+.classpath
+.project

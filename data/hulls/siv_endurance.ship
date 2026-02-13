@@ -1,0 +1,193 @@
+{
+  "hullName": "Endurance",
+  "hullId": "siv_endurance",
+  "hullSize": "CRUISER",
+  "spriteName": "graphics/ships/endurance/siv_endurance.png",
+  "style": "HIGH_TECH",
+  "height": 291,
+  "width": 196,
+  "center": [97, 154],
+  "collisionRadius": 152.5,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 160.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "missile_reload",
+    "solvaris_divine_architecture"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "LARGE",
+      "type": "HYBRID",
+      "mount": "HARDPOINT",
+      "arc": 30,
+      "angle": 0,
+      "locations": [106, 0]
+    },
+    {
+      "id": "WS0002",
+      "size": "MEDIUM",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 90,
+      "angle": 0,
+      "locations": [20, -36]
+    },
+    {
+      "id": "WS0003",
+      "size": "MEDIUM",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 90,
+      "angle": -0,
+      "locations": [20, 36]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 235,
+      "angle": -90,
+      "locations": [-11, -40]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 270,
+      "angle": 90,
+      "locations": [-11, 40]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 270,
+      "angle": -90,
+      "locations": [-64, -33]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 270,
+      "angle": 90,
+      "locations": [-64, 33]
+    },
+    {
+      "id": "WS0008",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 270,
+      "angle": 180,
+      "locations": [-113, 0]
+    },
+    {
+      "id": "WS0009",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "TURRET",
+      "arc": 90,
+      "angle": -0,
+      "locations": [-53, 9]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-81, -47],
+      "length": 131.5,
+      "width": 20,
+      "angle": 180,
+      "contrailSize": 20,
+      "style": "XE_CRYSTAL"
+    },
+    {
+      "location": [-81, 47],
+      "length": 131.5,
+      "width": 20,
+      "angle": -180,
+      "contrailSize": 20,
+      "style": "XE_CRYSTAL"
+    },
+    {
+      "location": [-72, -54.5],
+      "length": 77,
+      "width": 5,
+      "angle": -169.5,
+      "contrailSize": 5,
+      "style": "XE_CRYSTAL"
+    },
+    {
+      "location": [-72, 54.5],
+      "length": 77,
+      "width": 5,
+      "angle": 169.5,
+      "contrailSize": 5,
+      "style": "XE_CRYSTAL"
+    },
+    {
+      "location": [-70.5, -58],
+      "length": 71,
+      "width": 4,
+      "angle": -166,
+      "contrailSize": 4,
+      "style": "XE_CRYSTAL"
+    },
+    {
+      "location": [-70.5, 58],
+      "length": 71,
+      "width": 4,
+      "angle": 166,
+      "contrailSize": 4,
+      "style": "XE_CRYSTAL"
+    },
+    {
+      "location": [-69, -61],
+      "length": 60,
+      "width": 5,
+      "angle": -161,
+      "contrailSize": 5,
+      "style": "XE_CRYSTAL"
+    },
+    {
+      "location": [-69, 61],
+      "length": 60,
+      "width": 5,
+      "angle": 161,
+      "contrailSize": 5,
+      "style": "XE_CRYSTAL"
+    }
+  ],
+  "bounds": [
+    -127.5, 12.5,
+    -117, 21,
+    -98.5, 32,
+    -73, 31,
+    -75.5, 48,
+    -64.5, 69,
+    -20, 65.5,
+    -6, 53,
+    32.5, 54,
+    49.5, 46.5,
+    56, 41,
+    113.5, 22.5,
+    113.5, -22.5,
+    56, -41,
+    49.5, -46.5,
+    32.5, -54,
+    -6, -53,
+    -20, -65.5,
+    -64.5, -69,
+    -75.5, -48,
+    -73, -31,
+    -98.5, -32,
+    -117, -21,
+    -127.5, -12.5
+  ]
+}

@@ -1,0 +1,27 @@
+{
+    "id":"microwave_burst",
+    "type":"STAT_MOD",
+    "aiType":"INTERDICTOR",
+    
+    "statsScript":"data.scripts.shipsystems.MicrowaveWave",
+
+    "range":4000,
+    "randomRange":0,
+    
+    "fadeActivationSoundOnChargedown":true,
+    "useSound":"system_entropy",
+    "loopSound":"system_entropy_loop",
+    "deactivateSound":"system_entropy_off",
+    "outOfUsesSound":"gun_out_of_ammo",
+    
+    "aiHints":{
+        "activeSpeedIncrease":0,
+        "burstMovementPotential":0,
+        "averageSpeedIncrease":0,
+        
+        "threatRange":4000,
+        "threatAmount":1000,
+        "threatAngle":0,
+        "threatArc":360
+    }
+}

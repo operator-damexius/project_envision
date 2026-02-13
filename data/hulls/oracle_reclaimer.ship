@@ -1,0 +1,170 @@
+{
+  "hullName": "Reclaimer",
+  "hullId": "oracle_reclaimer",
+  "hullSize": "CRUISER",
+  "spriteName": "graphics/ships/reclaimer/oracle_reclaimer.png",
+  "style": "HIGH_TECH",
+  "height": 400,
+  "width": 200,
+  "center": [100, 200],
+  "collisionRadius": 230,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 242,
+  "viewOffset": 0,
+  "builtInMods": [
+    "missile_reload",
+    "prima_core"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "LARGE",
+      "type": "UNIVERSAL",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [152, -0]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "SYNERGY",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": -45,
+      "locations": [56, -30]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "SYNERGY",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": 45,
+      "locations": [56, 30]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "SYNERGY",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": -45,
+      "locations": [16, -30]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "SYNERGY",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": 45,
+      "locations": [16, 30]
+    },
+    {
+      "id": "WS0007",
+      "size": "MEDIUM",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": 0,
+      "locations": [-27, -49]
+    },
+    {
+      "id": "WS0008",
+      "size": "MEDIUM",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": -0,
+      "locations": [-27, 49]
+    },
+    {
+      "id": "WS0009",
+      "size": "LARGE",
+      "type": "UNIVERSAL",
+      "mount": "TURRET",
+      "arc": 70,
+      "angle": 0,
+      "locations": [91, -0]
+    },
+    {
+      "id": "WS0010",
+      "size": "MEDIUM",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 40,
+      "angle": 0,
+      "locations": [-32, -0]
+    },
+    {
+      "id": "WS0011",
+      "size": "SMALL",
+      "type": "SYNERGY",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": -45,
+      "locations": [-107, -25]
+    },
+    {
+      "id": "WS0012",
+      "size": "SMALL",
+      "type": "SYNERGY",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": 45,
+      "locations": [-107, 25]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 5,
+      "angle": 0,
+      "locations": [163.5, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-193, -21],
+      "length": 80,
+      "width": 30,
+      "angle": 180,
+      "contrailSize": 30,
+      "style": "XE_ORACLE"
+    },
+    {
+      "location": [-193, 21],
+      "length": 80,
+      "width": 30,
+      "angle": -180,
+      "contrailSize": 30,
+      "style": "XE_ORACLE"
+    }
+  ],
+  "bounds": [
+    -152.5, 7.5,
+    -189, 11,
+    -190.5, 32,
+    -140, 45.5,
+    -103.5, 50,
+    -83.5, 75.5,
+    -42.5, 75,
+    4.5, 47.5,
+    167, 35,
+    186.5, 16,
+    168, 13.5,
+    168, -13.5,
+    186.5, -16,
+    167, -35,
+    4.5, -47.5,
+    -42.5, -75,
+    -83.5, -75.5,
+    -103.5, -50,
+    -140, -45.5,
+    -190.5, -32,
+    -189, -11,
+    -152.5, -7.5
+  ]
+}

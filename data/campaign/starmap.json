@@ -1,8 +1,9 @@
 {
     "starSystemLocations":{
-        "pyralis":    [ 32000, -10000 ], # THE HEAD (Orange Giant, Center)
-        "vespera":    [ 30000, -11500 ], # THE HORN (Curving Down-Left)
-        "vailara":    [ 29000, -13500 ], # THE TIP (Curving Further Down-Left)
-        "seraphina":  [ 35500, -10500 ]  # THE BODY (Trailing Right)
+        "pyralis":    [ -72000, 40000 ],
+        "vespera":    [ -70000, 41500 ],
+        "vailara":    [ -69000, 43500 ],
+        "seraphina":  [ -75500, 40500 ],
+        "isola":      [ -73500, 42500 ]
     }
 }

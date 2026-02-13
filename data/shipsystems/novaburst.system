@@ -5,7 +5,6 @@
     
     "statsScript":"data.scripts.shipsystems.NovaBurstStats",
 
-    # VISUALS: ELECTRIC BLUE OVERCHARGE
     "jitterUnderColor":[50,150,255,155],
     "jitterUnderCopies":25,
     "jitterUnderMinRange":0,
@@ -26,8 +25,7 @@
     "engineGlowLengthMult":2,
     "engineGlowWidthMult":1.5,
     "engineGlowGlowMult":2,
-    
-    # AUDIO
+
     "soundFilterType":"LOWPASS",
     "soundFilterGain":0.8,
     "soundFilterGainHF":0.25,
@@ -35,8 +33,7 @@
     "useSound":"system_emp_emitter_activate",
     "loopSound":"system_high_energy_focus_loop",
     "outOfUsesSound":"gun_out_of_ammo",
-    
-    # AI LOGIC
+
     "aiHints":{
         "threatRange":4000,
         "threatAmount":600,

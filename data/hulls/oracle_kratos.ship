@@ -1,0 +1,294 @@
+{
+  "hullName": "Kratos",
+  "hullId": "oracle_kratos",
+  "hullSize": "CAPITAL_SHIP",
+  "spriteName": "graphics/ships/kratos/oracle_kratos.png",
+  "style": "HIGH_TECH",
+  "height": 400,
+  "width": 200,
+  "center": [100, 200],
+  "collisionRadius": 240,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 250,
+  "viewOffset": 0,
+  "builtInMods": [
+    "missile_reload",
+    "prima_core"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "UNIVERSAL",
+      "mount": "TURRET",
+      "arc": 90,
+      "angle": 0,
+      "locations": [150, -40]
+    },
+    {
+      "id": "WS0002",
+      "size": "MEDIUM",
+      "type": "UNIVERSAL",
+      "mount": "TURRET",
+      "arc": 90,
+      "angle": -0,
+      "locations": [150, 40]
+    },
+    {
+      "id": "WS0003",
+      "size": "MEDIUM",
+      "type": "UNIVERSAL",
+      "mount": "TURRET",
+      "arc": 90,
+      "angle": 0,
+      "locations": [22, -65]
+    },
+    {
+      "id": "WS0004",
+      "size": "MEDIUM",
+      "type": "UNIVERSAL",
+      "mount": "TURRET",
+      "arc": 90,
+      "angle": -0,
+      "locations": [22, 65]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-145.5, -75.5],
+      "length": 75.368271,
+      "width": 1.869559,
+      "angle": 175,
+      "contrailSize": 1.869559,
+      "style": "XE_ORACLE"
+    },
+    {
+      "location": [-145.5, 75.5],
+      "length": 75.368271,
+      "width": 1.869559,
+      "angle": -175,
+      "contrailSize": 1.869559,
+      "style": "XE_ORACLE"
+    },
+    {
+      "location": [-145.5, -74],
+      "length": 75.368271,
+      "width": 1.869559,
+      "angle": 175,
+      "contrailSize": 1.869559,
+      "style": "XE_ORACLE"
+    },
+    {
+      "location": [-145.5, 74],
+      "length": 75.368271,
+      "width": 1.869559,
+      "angle": -175,
+      "contrailSize": 1.869559,
+      "style": "XE_ORACLE"
+    },
+    {
+      "location": [-145.5, -72.5],
+      "length": 75.368271,
+      "width": 1.869559,
+      "angle": 175,
+      "contrailSize": 1.869559,
+      "style": "XE_ORACLE"
+    },
+    {
+      "location": [-145.5, 72.5],
+      "length": 75.368271,
+      "width": 1.869559,
+      "angle": -175,
+      "contrailSize": 1.869559,
+      "style": "XE_ORACLE"
+    },
+    {
+      "location": [-145.5, -71],
+      "length": 75.368271,
+      "width": 1.869559,
+      "angle": 175,
+      "contrailSize": 1.869559,
+      "style": "XE_ORACLE"
+    },
+    {
+      "location": [-145.5, 71],
+      "length": 75.368271,
+      "width": 1.869559,
+      "angle": -175,
+      "contrailSize": 1.869559,
+      "style": "XE_ORACLE"
+    },
+    {
+      "location": [-145.5, -69.5],
+      "length": 75.368271,
+      "width": 1.869559,
+      "angle": 175,
+      "contrailSize": 1.869559,
+      "style": "XE_ORACLE"
+    },
+    {
+      "location": [-145.5, 69.5],
+      "length": 75.368271,
+      "width": 1.869559,
+      "angle": -175,
+      "contrailSize": 1.869559,
+      "style": "XE_ORACLE"
+    },
+    {
+      "location": [-160, -30],
+      "length": 75.368271,
+      "width": 1.869559,
+      "angle": 180,
+      "contrailSize": 1.869559,
+      "style": "XE_ORACLE"
+    },
+    {
+      "location": [-160, 30],
+      "length": 75.368271,
+      "width": 1.869559,
+      "angle": -180,
+      "contrailSize": 1.869559,
+      "style": "XE_ORACLE"
+    },
+    {
+      "location": [-160, -29],
+      "length": 75.368271,
+      "width": 1.869559,
+      "angle": 180,
+      "contrailSize": 1.869559,
+      "style": "XE_ORACLE"
+    },
+    {
+      "location": [-160, 29],
+      "length": 75.368271,
+      "width": 1.869559,
+      "angle": -180,
+      "contrailSize": 1.869559,
+      "style": "XE_ORACLE"
+    },
+    {
+      "location": [-160, -28],
+      "length": 75.368271,
+      "width": 1.869559,
+      "angle": 180,
+      "contrailSize": 1.869559,
+      "style": "XE_ORACLE"
+    },
+    {
+      "location": [-160, 28],
+      "length": 75.368271,
+      "width": 1.869559,
+      "angle": -180,
+      "contrailSize": 1.869559,
+      "style": "XE_ORACLE"
+    },
+    {
+      "location": [-160, -27],
+      "length": 75.368271,
+      "width": 1.869559,
+      "angle": 180,
+      "contrailSize": 1.869559,
+      "style": "XE_ORACLE"
+    },
+    {
+      "location": [-160, 27],
+      "length": 75.368271,
+      "width": 1.869559,
+      "angle": -180,
+      "contrailSize": 1.869559,
+      "style": "XE_ORACLE"
+    },
+    {
+      "location": [-160, -26],
+      "length": 75.368271,
+      "width": 1.869559,
+      "angle": 180,
+      "contrailSize": 1.869559,
+      "style": "XE_ORACLE"
+    },
+    {
+      "location": [-160, 26],
+      "length": 75.368271,
+      "width": 1.869559,
+      "angle": -180,
+      "contrailSize": 1.869559,
+      "style": "XE_ORACLE"
+    },
+    {
+      "location": [-160, -25],
+      "length": 75.368271,
+      "width": 1.869559,
+      "angle": 180,
+      "contrailSize": 1.869559,
+      "style": "XE_ORACLE"
+    },
+    {
+      "location": [-160, 25],
+      "length": 75.368271,
+      "width": 1.869559,
+      "angle": -180,
+      "contrailSize": 1.869559,
+      "style": "XE_ORACLE"
+    },
+    {
+      "location": [-160, -24],
+      "length": 75.368271,
+      "width": 1.869559,
+      "angle": 180,
+      "contrailSize": 1.869559,
+      "style": "XE_ORACLE"
+    },
+    {
+      "location": [-160, 24],
+      "length": 75.368271,
+      "width": 1.869559,
+      "angle": -180,
+      "contrailSize": 1.869559,
+      "style": "XE_ORACLE"
+    },
+    {
+      "location": [-160, -23],
+      "length": 75.368271,
+      "width": 1.869559,
+      "angle": 180,
+      "contrailSize": 1.869559,
+      "style": "XE_ORACLE"
+    },
+    {
+      "location": [-160, 23],
+      "length": 75.368271,
+      "width": 1.869559,
+      "angle": -180,
+      "contrailSize": 1.869559,
+      "style": "XE_ORACLE"
+    },
+    {
+      "location": [-169.5, -0],
+      "length": 239,
+      "width": 31,
+      "angle": 180,
+      "contrailSize": 31,
+      "style": "XE_ORACLE"
+    }
+  ],
+  "bounds": [
+    -163.5, 15,
+    -174, 52.5,
+    -138, 84,
+    -91, 63.5,
+    -44, 83.5,
+    -7, 67,
+    28, 83.5,
+    169.5, 83.5,
+    187.5, 69.5,
+    187.5, -69.5,
+    169.5, -83.5,
+    28, -83.5,
+    -7, -67,
+    -44, -83.5,
+    -91, -63.5,
+    -138, -84,
+    -174, -52.5,
+    -163.5, -15
+  ]
+}

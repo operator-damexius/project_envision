@@ -1,9 +1,9 @@
 {
     "id":"argent",
-    "color":[100, 255, 200, 255],
-    "baseUIColor":[100, 255, 200, 255],
-    "darkerUIColor":[30, 150, 100, 255],
-    "secondaryUIColor":[50, 50, 50, 255],
+    "color":[140, 225, 190, 255],
+    "baseUIColor":[140, 225, 190, 255],
+    "darkerUIColor":[10, 40, 70, 255],
+    "secondaryUIColor":[10, 40, 70, 255],
     "secondarySegments":2,
 
     "displayName":"The Argent Concordat",
@@ -130,7 +130,15 @@
         "officerSkillsShuffleProbability":0,
         "officerSkills":[],
         "commanderSkillsShuffleProbability":0,
-        "commanderSkills":[]
+        "commanderSkills":[
+            "ballistic_mastery", 
+            "ordnance_expert", 
+            "helmsmanship", 
+            "combat_endurance", 
+            "damage_control", 
+            "target_analysis", 
+            "gunnery_implants"
+        ]
     },
 
     "illegalCommodities":[],
@@ -170,13 +178,47 @@
             "canRaid":true
         }
     },
-    
+
     "fleetTypeNames":{
-        "patrolSmall":"Drone Wing",
-        "patrolMedium":"Hunter-Killer Group",
-        "patrolLarge":"Extermination Fleet",
-        "inspectionFleet":"Audit Swarm",
-        "taskForce":"Concordat Task Force"
+        "trade":"Logistics Process",
+        "tradeLiner":"Personnel Transfer",
+        "tradeSmuggler":"Covert Transport",
+        "smallTrader":"Supply Packet",
+        
+        "patrolSmall":"Drone Picket",
+        "patrolMedium":"Security Matrix",
+        "patrolLarge":"Enforcement Phalanx",
+        
+        "inspectionFleet":"Audit Sub-Routine",
+        "taskForce":"Response Vector",
+        
+        "assaultFleet":"Purge Protocol",
+        "strikeFleet":"Intervention Thread",
+        
+        "foodReliefFleet":"Emergency Resource Packet",
+        "explorationFleet":"Data Acquisition Unit",
+        
+        "mercBountyHunter":"Retrieval Algorithm",
+        "mercPrivateer":"Contracted Process"
+    },
+
+    "ranks":{
+        "ranks":{
+            "factionLeader":{"name":"Prime Intelligence"},
+            "spaceAdmiral":{"name":"Network Admiral"},
+            "spaceCaptain":{"name":"Node Captain"},
+            "spaceCommander":{"name":"Sub-Routine Commander"},
+            "spaceLieutenant":{"name":"Process Lieutenant"}
+        },
+        "posts":{
+            "factionLeader":{"name":"Prime Intelligence"},
+            "administrator":{"name":"System Core"},
+            "patrolCommander":{"name":"Security Protocol"},
+            "fleetCommander":{"name":"Fleet Director"},
+            "baseCommander":{"name":"Hub Overseer"},
+            "stationCommander":{"name":"Station Kernel"},
+            "portmaster":{"name":"Logistics Daemon"}
+        }
     },
 
     "music":{

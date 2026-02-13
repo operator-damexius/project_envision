@@ -1,9 +1,9 @@
 {
     "id":"solvaris",
-    "color":[0, 71, 143, 255],
-    "baseUIColor":[0, 71, 143, 255],
-    "darkerUIColor":[0, 33, 71, 255],
-    "secondaryUIColor":[255, 255, 255, 255],
+    "color":[45, 85, 135, 255],
+    "baseUIColor":[45, 85, 135, 255],
+    "darkerUIColor":[25, 50, 80, 255],
+    "secondaryUIColor":[180, 180, 185, 255],
     "secondarySegments":4,
 
     "displayName":"Solvaris Remnant",
@@ -15,12 +15,17 @@
     "personNamePrefixAOrAn":"a",
     "displayNameIsOrAre":"is",
 
-    "logo":"graphics/factions/en_flag.png",
-    "crest":"graphics/factions/en_crest.png",
-    "shipNamePrefix":"SRSS",
+    "logo":"graphics/factions/en_solvaris_flag.png",
+    "crest":"graphics/factions/en_solvaris_crest.png",
+
+    "shipNamePrefix":"SIV", 
+    #Solvaris Imperial Vessel
+    #Traditional, regal, and authoritative. It tells the player, This ship belongs to the Empire.
 
     "shipNameSources":{
-        "BRITISH_NAVY":4
+        "BRITISH_NAVY":2,
+        "ROMAN":1,
+        "SPACE":1
     },
 
     "names":{
@@ -232,40 +237,45 @@
     },
 
     "fleetTypeNames":{
-        "trade":"SRSS Trader",
-        "tradeLiner":"SRSS Liner Flight",
-        "tradeSmuggler":"SRSS Expedited Trader",
-        "smallTrader":"SRSS Ecommerce Convoy",
-        "patrolSmall":"Security Fleet",
-        "patrolMedium":"Surveillance Fleet",
-        "patrolLarge":"Military Fleet",
-        "inspectionFleet":"SRSS Inspection Fleet",
-        "taskForce":"SRSS Advisory Fleet",
-        "assaultFleet":"SRSS Assault Fleet",
-        "strikeFleet":"SRSS Black-Ops Fleet",
-        "foodReliefFleet":"SRSS Reliefgoods Convoy",
-        "explorationFleet":"Exploration Fleet",
-        "mercBountyHunter":"SRSS Retrieval Contractor",
-        "mercPrivateer":"SRSS Security Contractor"
+        "trade":"Heavy Logistics Division",
+        "tradeLiner":"Chartered Personnel Transit",
+        "tradeSmuggler":"Priority Courier (Undisclosed)",
+        "smallTrader":"Local Distribution Flight",
+        
+        "patrolSmall":"Perimeter Recon Flight",
+        "patrolMedium":"System Security Squadron",
+        "patrolLarge":"Heavy Response Wing",
+        
+        "inspectionFleet":"Compliance Audit Team",
+        "taskForce":"Strategic Intervention Group",
+        
+        "assaultFleet":"Planetary Pacification Armada",
+        "strikeFleet":"Special Operations Vector",
+        
+        "foodReliefFleet":"Emergency Aid Transport",
+        "explorationFleet":"Deep Space Survey Unit",
+        
+        "mercBountyHunter":"Asset Retrieval Specialist",
+        "mercPrivateer":"Contracted Auxiliary Unit"
     },
 
     "ranks":{
         "ranks":{
-            "factionLeader":{"name":"Emperor"},
-            "factionLeaderFemale":{"name":"Empress"},
-            "spaceAdmiral":{"name":"Admiral"},
-            "spaceCaptain":{"name":"Captain"},
-            "spaceCommander":{"name":"Commander"},
-            "spaceLieutenant":{"name":"Lieutenant"}
+            "factionLeader":{"name":"Sovereign Emperor"},
+            "factionLeaderFemale":{"name":"Sovereign Empress"},
+            "spaceAdmiral":{"name":"High Admiral"},
+            "spaceCaptain":{"name":"Line Captain"},
+            "spaceCommander":{"name":"Wing Commander"},
+            "spaceLieutenant":{"name":"Tactical Lieutenant"}
         },
         "posts":{
-            "administrator":{"name":"Administrator"},
-            "patrolCommander":{"name":"Patrol Officer"},
-            "fleetCommander":{"name":"Fleet Officer"},
-            "baseCommander":{"name":"Base Officer"},
-            "outpostCommander":{"name":"Outpost Officer"},
-            "stationCommander":{"name":"Station Officer"},
-            "portmaster":{"name":"Port Officer"}
+            "administrator":{"name":"Planetary Governor"},
+            "patrolCommander":{"name":"System Warden"},
+            "fleetCommander":{"name":"Fleet Marshal"},
+            "baseCommander":{"name":"Citadel Prefect"},
+            "outpostCommander":{"name":"Outpost Overseer"},
+            "stationCommander":{"name":"Station Director"},
+            "portmaster":{"name":"Logistics Master"}
         }
     },
 

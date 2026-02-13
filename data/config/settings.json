@@ -1,18 +1,18 @@
 {
 
 	"designTypeColors":{
-		"solvaris": [0, 71, 143, 255],
-		"argent": [100, 255, 200, 255],
+		"solvaris": [45, 85, 135, 255],
+		"argent": [140, 225, 190, 255],
 
-		"Solvaris Remnant": [0, 71, 143, 255],
-		"Exiliums Remnant": [100, 255, 200, 255]
+		"Solvaris Remnant": [45, 85, 135, 255],
+		"Exiliums Remnant": [140, 225, 190, 255]
 	},
 	
 	"graphics":{
 		"blueprint_packages":{
-			"solvaris_ships": "graphics/factions/en_flag.png",
-			"solvaris_armory": "graphics/factions/en_flag.png",
-			"solvaris_structures": "graphics/factions/en_flag.png"
+			"solvaris_ships": "graphics/factions/en_solvaris_flag.png",
+			"solvaris_armory": "graphics/factions/en_solvaris_flag.png",
+			"solvaris_structures": "graphics/factions/en_solvaris_flag.png"
 			
     	}
 

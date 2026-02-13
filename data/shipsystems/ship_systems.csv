@@ -1,4 +1,8 @@
 name,id,flux/second,f/s (base rate),f/s (base cap),flux/use,f/u (base rate),f/u (base cap),cr/u,max uses,regen,charge up,active,down,cooldown,toggle,noDissipation,noHardDissipation,hardFlux,noFiring,noTurning,noStrafing,noAccel,noShield,noVent,isPhaseCloak,tags,icon
-Temporal Surge,temporalsurge,0,0,0,500,0,0,0,,,,15,5,3,5,,,,,,,,,,,,graphics/icons/shipsystems/solvaris_nv1.png
-Neural Nova,novaburst,0,0,0,1000,0,0,0,,,5,5,5,10,5,5,,,,,,,,,,,graphics/icons/shipsystems/solvaris_nv2.png
-Singularity Storm,singularity_storm,0,0,0,2000,0,0,0,,,10,10,10,30,10,10,,,,,,,,,,,graphics/icons/shipsystems/solvaris_nv3.png
+Temporal Surge,temporalsurge,,,,2000,,,,,,4,10,,10,,,,,,,,,,,,movement,graphics/icons/shipsystems/system_nv1.png
+Neural Nova,novaburst,,,,5000,,,,1,0.01,5,5,5,,,TRUE,TRUE,TRUE,,,,,,,,"defensive, offensive",graphics/icons/shipsystems/system_nv2.png
+Singularity Storm,singularity_storm,,,,10000,,,,1,0.05,4,4,4,,,TRUE,TRUE,TRUE,TRUE,,,,,TRUE,,offensive,graphics/icons/shipsystems/system_nv3.png
+Repulsion Damper,repulsion_damper,,,,500,,,,,,1.5,,1.5,,TRUE,,,TRUE,TRUE,,,,,,,defensive,graphics/icons/shipsystems/system_nv4.png
+Ionic Overdrive,ionic_overdrive,,,,200,,,,,,1,5,1,5,,,,,,,,,,,,movement,graphics/icons/shipsystems/system_nv5.png
+Logic-Step,logic_step,,,,200,,,,5,0.1,0.25,0.25,0.25,,,TRUE,,TRUE,,,,,,,,movement,graphics/icons/shipsystems/system_nv6.png
+Microwave Burst,microwave_burst,,,,7000,,,,5,0.1,,2.7,,,,,,TRUE,,,,,,,TRUE,offensive,graphics/icons/shipsystems/system_nv3.png

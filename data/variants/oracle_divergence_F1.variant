@@ -1,10 +1,19 @@
 {
-    "displayName": "F1",
-    "fluxCapacitors": 3,
+    "displayName": "Standard",
+    "fluxCapacitors": 27,
     "fluxVents": 0,
     "goalVariant": true,
     "hullId": "oracle_divergence",
-    "hullMods": [],
+    "hullMods": [
+        "frontemitter",
+        "stabilizedshieldemitter",
+        "advancedshieldemitter",
+        "efficiency_overhaul",
+        "insulatedengine",
+        "turretgyros",
+        "armoredweapons",
+        "magazines"
+    ],
     "permaMods": [],
     "sMods": [],
     "variantId": "oracle_divergence_F1",
@@ -21,6 +30,7 @@
             "autofire": false,
             "mode": "ALTERNATING",
             "weapons": {
+                "WS0001": "amsrm",
                 "WS0002": "amsrm",
                 "WS0003": "amsrm",
                 "WS0004": "amsrm"
@@ -30,7 +40,6 @@
             "autofire": false,
             "mode": "ALTERNATING",
             "weapons": {
-                "WS0001": "amsrm",
                 "WS0011": "amsrm",
                 "WS0012": "amsrm",
                 "WS0014": "amsrm",
